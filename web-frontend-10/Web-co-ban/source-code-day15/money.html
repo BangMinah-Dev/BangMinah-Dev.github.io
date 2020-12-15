@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convert</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="POST">
+            <h1>Currency Converter</h1>
+            <h2>Select input currency</h2>
+            <label for="USD">USD</label>
+            <input type="radio" value="USD" name="currency" id="USD">
+            <br>
+            <label for="EUR">EUR</label>
+            <input type="radio" value="EUR" name="currency" id="EUR">
+            <br>
+            <input type="text" name="money" id="money">
+            <input type="button" value="Convert Currency" onclick="convert()">
+        </form>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function convert() {
+            let value = document.getElementById("money").value
+            let usd = document.getElementById("USD").checked
+            let eur = document.getElementById("EUR").checked
+
+            if(usd == true){
+                document.getElementById("res").innerHTML = value * 23176.50
+            }
+            if(eur == true){
+                document.getElementById("res").innerHTML = value * 27517.46
+            }
+        }
+    </script>
+</body>
+
+</html>

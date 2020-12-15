@@ -1,0 +1,5 @@
+Position : fixed;
+
+position : relative ( So với vị trí hiện tại đang đứng )
+
+postion : absolute ( So với vị trí với thuộc tính relative nếu không có thuộc tính relative ở thẻ cha thì sẽ so với thẻ body )	

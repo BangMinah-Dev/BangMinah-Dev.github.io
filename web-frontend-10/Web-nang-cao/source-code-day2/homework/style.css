@@ -1,0 +1,113 @@
+/* css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.caption {
+    margin: 10px 0px 0px 25px;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.calculator {
+    border: 1px solid black;
+    width: 400px;
+    height: 550px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[name="monitor"] {
+    width: 88%;
+    height: 80px;
+    margin: 20px auto;
+    padding: 0px 10px;
+    text-align: right;
+    font-size: 30px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid gray;
+    cursor: default;
+    animation: ease-in-out 1s;
+}
+
+.control-panel {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    margin-top: 0;
+}
+
+.control-panel .row {
+    display: flex;
+    justify-content: center;
+}
+
+.control-panel button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px;
+    color: #212529;
+    background-color: #f8f9fa;
+    border: 0px #f8f9fa;
+    outline: 0;
+}
+
+.control-panel button:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border: 0px #dae0e5;
+}
+
+#clear {
+    color: #fff;
+    background-color: #ff2f44;
+    border: 0px #ff2f44;
+}
+
+#clear:hover {
+    color: #fff;
+    background-color: #e70017;
+    border: 0px #e70017;
+}
+
+#divide,
+#multi,
+#sub,
+#sum,
+#del,
+#equal {
+    color: #00aaff;
+}
+
+#sqrt,
+#giaiThua,
+#percent,
+#binhPhuong,
+#o_bracket,
+#c_bracket{
+    background-color: #bfffbf;
+} 
+
+#sqrt:hover,
+#giaiThua:hover,
+#percent:hover,
+#binhPhuong:hover,
+#o_bracket:hover,
+#c_bracket:hover{
+    background-color: #91ec91;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="caption">Calculator</div>
+            <input type="text" name="monitor" id="monitor" value="" readonly>
+            <div class="control-panel">
+                <div class="row">
+                    <button name="clear" id="clear" value="C" onclick="_clear()">C</button>
+                    <button name="sqrt" id="sqrt" value="" onclick="_sqrt()"><i class="fas fa-square-root-alt"></i></button>
+                    <button name="giaiThua" id="giaiThua" value="" onclick="giaiThua()">x!</button>
+                    <button name="percent" id="percent" value="%" onclick="percent()"><i class="fas fa-percentage"></i></button>
+                </div>
+                <div class="row">
+                    <button name="binhPhuong" id="binhPhuong" value="" onclick="binhPhuong()">x<sup>2</sup></button>
+                    <button name="btn" id="o_bracket" value="(">(</button>
+                    <button name="btn" id="c_bracket" value=")">)</button>
+                    <button name="btn" id="divide" value="/"><i class="fas fa-divide"></i></button>
+                </div>
+                <div class="row">
+                    <button name="btn" id="nbr_7" value="7">7</button>
+                    <button name="btn" id="nbr_8" value="8">8</button>
+                    <button name="btn" id="nbr_9" value="9">9</button>
+                    <button name="btn" id="multi" value="*"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="row">
+                    <button name="btn" id="nbr_4" value="4">4</button>
+                    <button name="btn" id="nbr_5" value="5">5</button>
+                    <button name="btn" id="nbr_6" value="6">6</button>
+                    <button name="btn" id="sub" value="-"><i class="fas fa-minus"></i></button>
+                </div>
+                <div class="row">
+                    <button name="btn" id="nbr_1" value="1">1</button>
+                    <button name="btn" id="nbr_2" value="2">2</button>
+                    <button name="btn" id="nbr_3" value="3">3</button>
+                    <button name="btn" id="sum" value="+"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="row">
+                    <button name="btn" id="nbr_0" value="0">0</button>
+                    <button name="btn" id="comma" value=".">.</button>
+                    <button name="del" id="del" value="del" onclick="_del()"><i class="fas fa-backspace"></i></button>
+                    <button name="equal" id="equal" value="=" onclick="equal()"><i class="fas fa-equals"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

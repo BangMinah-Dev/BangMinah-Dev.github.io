@@ -1,0 +1,540 @@
+/* css */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Playfair+Display&family=Ubuntu:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, .p, h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 0;
+}
+
+.container{
+    max-width: 1200px;
+    border: 1px solid transparent;
+    padding: 0;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+h3{
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #b4ad9e;
+}
+
+h2{
+    font-size: 30px;
+    color: #626262;
+}
+
+.paragraph{
+    font-size: 14px;
+    color: #626262;
+}
+
+.leaveCM{
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+}
+
+/* Start Header */
+.navbar{
+    height: 164px;
+    padding: 0px 69px;
+    background-color: #FFF!important;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-family: "Inconsolata", monospace;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item{
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.nav-item:last-child{
+    padding-right: 0;
+}
+
+.navbar ul a {
+    margin: 0 !important;
+    padding: 15px 0px !important;
+    font-weight: 600;
+}
+
+.banner{
+    padding: 0px 69px;
+}
+
+.banner img{
+    width: 100%;
+}
+/* End Header */
+
+.content{
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.main-content{
+    margin: 0 !important;
+    display: flex;
+}
+
+.main-content .content{
+    padding-right: 0px;
+}
+
+.main-content .content .paragraph{
+    padding-right: 0px;
+}
+
+.main-content .box-1{
+    width: 70%;
+    margin-right: 45px;
+}
+
+.main-content .box-2{
+    width: 30%;
+}
+
+.main-content .box-2 .content{
+    padding-left: 0px;
+    padding-right: 70px;
+    padding-top: 100px;
+}
+
+.main-content .box-2 .about-image{
+    overflow: hidden;
+}
+
+.main-content .box-2 .about-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-content .box-2 h2{
+    margin-top: 28px;
+    font-size: 24px;
+}
+
+.main-content .box-2 p{
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.main-content .box-2 .topPost{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: #b4ad9e;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main-content a{
+    color: #b4ad9e;
+}
+
+.main-content ul{
+    padding-left: 20px;
+}
+
+.main-content li{
+    margin: 20px 0px;
+}
+
+.main-content li a{
+    color: #000;
+}
+
+.main-content .cm a{
+    color: #b4ad9e;
+}
+
+/* Start Description */
+.description h3{
+    margin-top: 98px;
+}
+
+.description h2{
+    margin-top: 29px;
+}
+
+.description .paragraph{
+    margin-top: 34px;
+}
+
+.description .paragraph span{
+    font-weight: bold;
+}
+/* End Description */
+
+/* Start Image Content */
+
+.image{
+    padding: 60px 0px 0px 150px;
+    overflow: hidden;
+}
+
+.image .item img{
+    padding-top: 60px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image .text{
+    padding: 60px 15px 0px 15px;
+    font-style: italic;
+}
+/* End Image Content */
+
+.share{
+    text-align: right;
+    margin-top: 65px;
+    color: #b4ad9e;
+    font-size: 13px;
+}
+
+.share a{
+    color: #b4ad9e;
+    margin-left: 13px;
+    font-size: 14px;
+}
+
+/* Start Relation */
+.relation{
+    display: flex;
+    flex-direction: column;
+}
+
+.relation h3{
+    margin-top: 68px;
+}
+
+.relation h2{
+    margin: 24px 0px;
+    font-size: 20px;
+}
+
+.relation .row{
+    margin-top: 40px;
+}
+
+.row .box{
+    width: 100%;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.row .box:nth-child(1){
+    padding-left: 15px;
+}
+
+.row .box:last-child{
+    padding-right: 15px;
+}
+
+.row img{
+    width: 100%;
+    object-fit: cover;
+}
+/* End Relation */
+
+
+/* Start Social */
+
+.social{
+    margin-top: 60px;
+}
+
+.social .user{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social .user .user-image{
+    width: 119px;
+    height: 70px;
+    margin-right: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 34px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.social .user .user-image{
+    background-color: #cae5e0;
+}
+
+.social .user .user-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.social button{
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    color: #b4ad9e;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*  */
+
+.social .self{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.social .self .user-image{
+    width: 80px;
+    height: 70px;
+    margin-right: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #FFF;
+    font-size: 34px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.social .self .user-image{
+    background-color: #ededea;
+}
+
+.social .self .user-image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.self input{
+    width: 100%;
+    height: 70px;
+    padding-left: 35px;
+    border-radius: 5px;
+    border: 1px solid #C8C8C8;
+    outline: 0;
+}
+
+.self input::placeholder{
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    color: #c8c8c8;
+}
+
+.self .user-info{
+    width: 100%;
+}
+
+.connect{
+    margin-top: 35px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.connect p{
+    color: #b4ad9e;
+    text-transform: uppercase;
+    margin-right: 25px;
+}
+
+.connect a{
+    color: #626262;
+    margin-left: 15px;
+}
+
+.connect a:nth-child(2){
+    color: #C8C8C8;
+}
+
+/* End Social */
+
+/* Start Footer */
+
+.container-fluid{
+    padding: 0;
+    height: 435px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    background-color: #F0F0F0;
+}
+
+footer{
+    margin-top: 100px;
+    height: 100px!important;
+}
+
+footer > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 69px;
+}
+
+footer a{
+    margin-left: 15px;
+    color: #000;
+}
+
+footer a:nth-child(1){
+    margin-left: 0px;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+/* End Footer */
+
+@media (max-width: 768px){
+
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .navbar{
+        height: auto;
+        padding: 5px 0px;
+    }
+
+    .nav-item{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .banner{
+        padding: 0px;
+    }
+
+    .paragraph{
+        text-align: justify;
+    }
+
+    .main-content{
+        margin: 0 !important;
+        display: block;
+    }
+    
+    .main-content .content{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    
+    .main-content .content .paragraph{
+        padding-right: 0px;
+    }
+    
+    .main-content .box-1{
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+    .main-content .box-2{
+        width: 100%;
+    }
+    
+    .main-content .box-2 .content{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+
+    .main-content .container{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .container-fluid{
+        height: auto;
+    }
+
+    .social .user{
+        display: block;
+    }
+
+    .social .user .user-image{
+        width: 70px;
+        height: 70px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .social .user .user-content{
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    .social .self{
+        display: block;
+    }
+
+    .social .self .user-image{
+        width: 70px;
+        height: 70px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+
+    footer{
+        height: auto!important;
+    }
+
+    footer > .container{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    footer > .container > .item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer a{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    footer > .container > .item:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer > .container > .item:nth-child(2) a{
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+ 
+}

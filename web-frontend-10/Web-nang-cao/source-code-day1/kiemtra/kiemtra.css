@@ -1,0 +1,37 @@
+/* css */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.input-text{
+    margin: 10px 0px;
+    display: flex;
+}
+
+.input-text {
+    height: 20px;
+}
+
+.btn{
+    height: 25px;
+    display: block;
+}
+
+#res{
+    display: inline-block;
+    padding: 0;
+    margin: 0px 10px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.input-text1{
+    display: inline;
+}
+#res_array{
+    display: inline;
+}

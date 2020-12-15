@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kiemtra.css">
+    <title>Bài kiểm tra</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>
+                Bài 1: Viết hàm chuyển đổi nhiệt độ từ độ C sang độ F, tham số truyền vào là 1 số nguyên biểu thị độ C.
+                Ví dụ tham số truyền vào là -30 thì kết quả trả về là -22.
+            </h2>
+            <div class="main-content">
+                <form action="#" method="POST">
+                    <label for="tempC">°C</label>
+                    <input type="radio" name="temp" id="tempC" checked>
+                    <label for="tempF">°F</label>
+                    <input type="radio" name="temp" id="tempF">
+                    <input type="text" name="temp" id="temp" class="input-text">
+                    <button type="button" onclick="convertTemp()" class="btn">Convert</button>
+                    <p id="res"></p>
+                </form>
+            </div>
+        </div>
+        <!--  -->
+        <div class="content">
+            <h2>
+                Bài 2: Cho 1 mảng có độ dài lớn hơn 2, chứa các số khác nhau. Hãy viết hàm tìm ra số lớn thứ nhì
+                trong mảng.
+            </h2>
+            <div class="main-content">
+                <p>Sử dụng hàm <b>findSecondMax()</b> tham số truyền vào là 1 mảng</p>   
+            </div>
+        </div>
+        <!--  -->
+        <div class="content">
+            <h2>
+                Bài 3: Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất.
+            </h2>
+            <div class="main-content">
+                <p>
+                    Sử dụng hàm <b>findMaxLength()</b> tham số truyền vào là 1 mảng các chuỗi
+                </p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="content">
+            <h2>
+                Bài 4: Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết
+                thúc bởi chuỗi target hay không. Kết quả trả về là true hoặc false.
+            </h2>
+            <div class="main-content">
+                <p>
+                    Sử dụng hàm <b>checkLastChar()</b> có hai tham số truyền vào : Tham số thứ nhất là 1 chuỗi, tham số
+                    thứ 2 là chuỗi có 1 ký tự
+                </p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="content">
+            <h2>
+                Bài 5: Cho 1 mảng chỉ chứa các phần tử có kiểu dữ liệu number, string và boolean. Hãy kiểm tra xem
+                trong mảng đó có phần tử nào bị lặp lại hay không (xuất hiện 2 lần trở lên). Kết quả trả về true (nếu
+                lặp) hoặc false (nếu không lặp).
+            </h2>
+            <div class="main-content">
+                <p>
+                    Sử dụng hàm <b>checkArray()</b> tham số truyền vào là 1 mảng
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="kiemtra.js"></script>
+</body>
+
+</html>

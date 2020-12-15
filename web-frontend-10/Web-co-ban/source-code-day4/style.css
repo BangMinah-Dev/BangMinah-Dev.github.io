@@ -1,0 +1,269 @@
+/*  */
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    /* font-weight: lighter; */
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-center{
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* START NAVBAR */
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #34465C;
+    padding: 0px 16px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo{
+    width: 120px;
+    height: 100%;
+    display: flex;
+}
+
+.logo img{
+    width: 120px;
+    display: flex;
+}
+
+.navbar .menu{
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    justify-content: flex-end;
+}
+
+.menu ul{
+    height: 100%;
+}
+
+.menu ul a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.menu ul li{
+    height: 100%;
+    margin: 0px 8px;
+    padding: 0px 3px;
+    list-style-type: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu ul a:hover{
+    color: #c4c4c4;
+}
+
+.shopping_cart{
+    font-size: 23px;
+    margin: 0px 17px 0px 10px;
+    padding: 0px 3px;
+    color: #fff;
+}
+
+.avatar{
+    width: 32px;
+    height: 32px;
+}
+
+.avatar img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* END NAVBAR */
+
+/* START NEWFEED */
+
+.layout{
+    width: 64.5%;
+    margin: 85px auto;
+}
+
+.new_feed{
+    width: 100%;
+}
+
+.layout .widget_1{
+    width: 67%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.layout .widget_2{
+    width: 31%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.layout .widget_1 img{
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.layout .widget_2 .post a{
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout .widget_2 .post .thumbnail{
+    display: flex;
+    width: 30%;
+}
+
+.layout .widget_2 .post .title{
+    display: flex;
+    width: 68%;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #464646;
+}
+
+.layout .widget_2 .post .title .author{
+    color: #757575;
+}
+.layout .widget_2 .post img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 6px 0px 0px 6px;
+}
+
+/* END NEWFEED */
+
+/* START INTRO */
+.intro .post{
+    text-align: center;
+    margin: 0px 2%;
+}
+
+.intro .caption{
+    margin: 5px 0px;
+    color: #464646;
+    text-transform: uppercase;
+}
+
+.intro .text{
+    color: #999999;
+    font-size: 14px;
+}
+/* END INTRO */
+
+/* START PRODUCT */
+._bgColor{
+    width: 100%;
+    background-color: #E4F2FD ;
+}
+
+.product{
+    padding: 70px 0px;
+}
+
+.product .button{
+    border: 2px solid #2196f3;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .list .card{
+    margin: 50px 0px;
+    width: 32%;
+    border-radius: 5px;
+}
+
+.product .list .card img{
+    width: 100%;
+}
+
+.product .content{
+    background-color: #fff;
+    padding: 15px 30px;
+    margin-top: -7px;
+}
+
+.product h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.product .content p{
+    padding: 5px 0px;
+    font-weight: 300;
+    color: #5e5e5e;
+    font-size: 14px;
+}
+/* END PRODUCT */
+
+/* START FOOTER */
+.footer{
+    width: 100%;
+    background-color: #464646;
+
+}
+
+.footer .layout{
+    margin-bottom: 0px !important;
+    padding: 100px 0px;
+}
+
+.footer .layout ul{
+    padding: 0px !important;
+}
+
+.footer .box_1{
+    width: 100%;
+}
+
+.footer h4{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer li{
+    display: flex;
+    width: 100%;
+    color: #919294;
+    line-height: 2!important;
+}
+
+.footer a{
+    color: #919294;
+    line-height: 2!important;
+}
+
+.footer li span{
+    margin-top: 15px;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+/* END FOOTER */

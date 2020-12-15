@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Homework</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>3 smartphone Android mạnh nhất thế giới</h1>
+            <section class="s1">
+                <div class="image">
+                    <img src="img/Asusjpg.jpg" alt="smartphone asus" title="smartphone asus">
+                </div>
+                <div class="sub_content">
+                    <h3>Asus ROG Phone 3 (647.919 điểm)</h3>
+                    <p id="p1">
+                        Mẫu điện thoại chuyên game của Asus đã đứng "đỉnh" bảng xếp hạng smartphone Android mạnh nhất
+                        của AnTuTu trong ba tháng liên tiếp. Sản phẩm được trang bị cấu hình mạnh nhất hiện nay, với
+                        chip Snapdragon 865 Plus của Qualcomm, RAM 16 GB, bộ nhớ trong 512 GB, màn hình 6,59 inch tần
+                        số quét 144 Hz - cao nhất thị trường.
+                        Ngoài ra, máy cũng có ngoại hình với các đường cắt vát phía sau khá lạ mắt, đi kèm quạt tản
+                        nhiệt với thiết kế "hầm hố" cho game thủ.
+                    </p>
+                </div>
+            </section>
+            <section class="s2">
+                <div class="image">
+                    <img src="img/oppo.jpg" alt="smartphone oppo" title="smartphone oppo">
+                </div>
+                <div class="sub_content">
+                    <h3>Oppo Find X2 Pro (614.425 điểm)</h3>
+                    <p id="p2">
+                        Smartphone của Oppo đứng vị trí thứ hai trên bảng xếp hạng của AnTuTu, thế chỗ cho Xiaomi Mi 10
+                        Ultra tháng trước. Máy chạy chip Snapdragon 865, RAM 12 GB và bộ nhớ 512 GB, màn hình 6,7 inch 
+                        độ phân giải QHD+, và tần số quét 120 Hz, cài sẵn Color OS 7.1 trên nền Android 10.
+                    </p>
+                </div>
+            </section>
+            <section class="s3">
+                <div class="image">
+                    <img src="img/iqoo.jpg" alt="smartphone iqoo" title="smartphone iqoo">
+                </div>
+                <div class="sub_content">
+                    <h3>iQOO Neo3 (600.408 điểm)</h3>
+                    <p id="p3">
+                        Smartphone thương hiệu con của Vivo tăng hai bậc so với xếp hạng AnTuTu Benchmark tháng trước.
+                        Neo3 sở hữu cấu hình mạnh với chip xử lý Snapdragon 865, RAM 12 GB và bộ nhớ trong 512 GB, màn
+                        hình 6,75 inch tần số quét 120 Hz, pin 4.500 mAh kèm sạc nhanh 44W và hỗ trợ 5G.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <hr>
+        <div class="control-panel">
+            <h3>Control Panel</h3>
+            <div>
+                Choose :
+                <br>
+                Paragraph 1 type p1
+                <br>
+                Paragraph 2 type p2
+                <br>
+                Paragraph 3 type p3
+            </div>
+            <div class="option">
+                <div class="input">
+                    <button class="btn" type="button" onclick="changeColor()">Chang Text Color</button>
+                </div>
+                <div class="input">
+                    <div>Type color's name or Hex Code to change background color</div>
+                    <button class="btn" type="button" onclick="changBgColor()">Chang BG Color</button>
+                    <input type="text" name="bgColor" id="bgColor" value="">
+                </div>
+                <div class="input">
+                    <button class="btn" type="button" onclick="copyContent()">Copy Content</button>
+                    <input type="text" name="changeContent" id="copy" placeholder="From" value="">
+                    <input type="text" name="changeContent" id="paste" placeholder="To" value="">
+                </div>
+                <div class="input">
+                    <div>Type number to change font size</div>
+                    <button class="btn" type="button" onclick="changeFontSize()">Change Font Size</button>
+                    <input type="text" name="changeFontSize" id="changeFontSize" value="">
+                    <span class="res"></span>
+                </div>
+                <div class="input">
+                    <div>Choose Paragraph to change font size</div>
+                    <button class="btn" type="button" onclick="decreaseFontSize()"><i class="fas fa-minus"></i></button>
+                    <input type="text" name="paragraph" onchange="computed()" id="element" value="">
+                    <button class="btn" type="button" onclick="increaseFontSize()"><i class="fas fa-plus"></i></button>
+                    <span class="res"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

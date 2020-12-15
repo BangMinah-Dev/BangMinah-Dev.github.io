@@ -1,0 +1,11 @@
+ul li
+ul > li
+ul + ul
+ul ~ ul
+
+ul li- Nhìn vào bên trong - Chọn tất cả các liphần tử được đặt (bất kỳ đâu) bên trong ul; Bộ chọn con cháu
+ul > li- Nhìn vào bên trong - Chỉ chọn các li phần tử trực tiếp của ul; tức là nó sẽ chỉ chọn những người con trực tiếp li của ul; Bộ chọn con hoặc Bộ chọn tổ hợp con
+ul + ul- Nhìn ra bên ngoài - Chọn ul ngay sau ul; Nó không phải là nhìn vào bên trong, mà là nhìn ra bên ngoài để tìm yếu tố ngay sau đây; Bộ chọn anh chị em liền kề
+ul ~ ul- Nhìn ra bên ngoài - Chọn tất cả những ulthứ theo sau ulkhông quan trọng nó ở đâu, nhưng cả hai ulphải có cùng một cha mẹ; Bộ chọn anh chị em chung
+
+https://stackoverflow.com/questions/10782054/what-does-the-tilde-squiggle-twiddle-css-selector-mean

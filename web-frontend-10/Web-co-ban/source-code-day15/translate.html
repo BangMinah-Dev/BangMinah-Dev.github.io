@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="button" id="" name="btn-translate" onclick="translates()" value="Xin chào">
+    </div>
+    <script>
+        function translates() {
+            let value = prompt("Bạn đến từ quốc gia nào")
+            switch (value) {
+                case "Anh":
+                    alert("Hello")
+                    break
+                case "Nga":
+                    alert("Здравствуйте")
+                    break
+                case "Han":
+                    alert("안녕하세요")
+                    break
+                case "Nhat":
+                    alert("こんにちは")
+                    break
+                case "Thai":
+                    alert("สวัสดี")
+                    break
+                default:
+                    alert("Xin chào")
+            }
+        }
+    </script>
+</body>
+
+</html>

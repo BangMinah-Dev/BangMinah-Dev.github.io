@@ -1,0 +1,70 @@
+/* css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row:nth-child(2){
+    margin-top: 15px;
+}
+
+.row .box{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #00aaff;
+    margin-right: 15px;
+}
+
+.row .box:nth-child(1n){
+    margin-left: 0px;
+}
+
+.row .box:nth-child(4n){
+    margin-right: 0;
+}
+
+.footer{
+    height: 300px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 576px){
+    .container{
+        display: block;
+    }
+
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .row .box{
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .row .box:nth-child(1n){
+        margin-left: 0px;
+    }
+
+    .row .box:last-child{
+        margin-bottom: 0px;
+    }
+}

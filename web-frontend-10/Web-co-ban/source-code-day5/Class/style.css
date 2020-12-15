@@ -1,0 +1,191 @@
+/* css */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0px 16px 0px 16px;
+    background-color: #34465c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.avatar {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0px 30px;
+}
+
+.menu-list{
+    display: flex;
+}
+
+.menu-list a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+li{
+    /* display: block; */
+    list-style-type: none;
+    margin: 0px 15px;
+}
+
+.content {
+    margin: 80px;
+    height: 2000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    width: 70%;
+    height: 500px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.list-blog {
+    width: 30%;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shadow {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: contain;
+    background-color: #ff0000;
+}
+
+.widget {
+    height: 21.5%;
+    width: 100%;
+}
+
+/* icon */
+.icon-up{
+    font-size: 40px;
+    color: #464646;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.fa-caret-down{
+    color: #fff;
+}
+
+/* .menu-list{
+    position: relative;
+} */
+
+.loTrinh, .chungToi{
+    position: relative;
+}
+
+.sub-menu, .sub-menu-2{
+    position: absolute;
+    /* top: 40px; */
+    left: -100px;
+    padding: 0px;
+    padding-top: 25px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* .sub-menu-2{
+    position: absolute;
+    top: 40px;
+    left: -100px;
+    padding: 0px;
+    padding-top: 25px;
+    border-radius: 5px;
+    display: none;
+} */
+
+.sub-menu li, .sub-menu-2 li{
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    background-color: steelblue;
+}
+
+.sub-menu li a{
+    color: #fff;
+}
+
+.menu-list li:hover .sub-menu{
+    display: block;
+}
+
+.menu-list li:hover .sub-menu-2{
+    display: block;
+}
+
+.menu-list .loTrinh:hover a{
+    color: darkgoldenrod;
+}
+
+.menu-list .sub-menu li:hover{
+    background-color: white;
+}
+
+/* .menu-list .sub-menu li a{
+    color: white!important;
+} */
+
+.menu-list .sub-menu li:hover{
+    color: blue;
+}
+
+.menu-list .loTrinh .sub-menu li a:hover + a{
+    color: rebeccapurple ;
+}
+
+/* test display none & visibility hidden */
+/* #blog{
+    display: none; KHÔNG giữ khoảng trống 
+    visibility: hidden; giữ khoảng trống
+} */

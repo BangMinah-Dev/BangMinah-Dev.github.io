@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function demo() {
+        //     {
+        //         var x = 10
+        //         let y = 5
+        //     }
+        //     console.log(x)
+        //     console.log(y)
+        // }
+
+        // let person = {
+        //     name: "Quynh",
+        //     age: 24,
+        //     run: () => { console.log("run") }
+        // }
+
+        // const student = {
+        //     firstName: 'Tèo',
+        //     lastName: 'Nguyễn',
+        //     age: 20
+        // }
+
+        // for (const key in student) {
+        //     console.log(key, student[key])
+        // }
+
+        // let numbers = [1, 2, 3, 4, 5, 6, 7]
+        // let names = ["Quynh", "Viet", "Linh", "Hieu"]
+        // let checks = [true, true, false, false, true]
+
+        // console.log(numbers[3]);
+
+        // numbers.push(8, 9)
+
+        // const string = 'Techmaster';
+        // for (let i = 0; i < numbers.length; i++) {
+        //     console.log("a " + numbers[i])
+        // }
+
+        // const array = ['a', 'b', 'c', 'd'];
+        // for (const item of array) {
+        //     console.log(item)
+        // }
+
+
+        // Viết hàm truyền vào một mảng các số và tính ra tổng các số đó.
+        function sum(arr) {
+            let tong = 0;
+            for (let i of arr) {
+                tong = tong + i
+            }
+            console.log(tong)
+            return tong;
+        }
+
+        // Viết hàm truyền vào một mảng các số và tính ra tổng bình phương các số đó
+        function binhPhuong(arr) {
+            let tong = 0
+            for (let i of arr) {
+                tong = tong + (i * i)
+            }
+            console.log(tong)
+        }
+
+        // Cho một mảng các số nguyên bất kỳ, dùng phương thức map() tạo ra một mảng mới với các số là số dư tương ứng khi chia các số trong mảng cũ cho 2.
+
+        // const numbers = [2, 3, 4, 5];
+        // const doubles = numbers.map(number => number * 2)
+
+        // console.log(doubles)
+
+
+        function newFunc(arr) {
+            const newArr = arr.map(arr => arr % 2)
+            console.log(newArr)
+        }
+
+
+        // Dùng phương thức filter() lọc ra các số chẵn trong một mảng nhiều số bất kỳ.
+
+        function TimSoChan(arr) {
+            let soChan = arr.filter(number => number % 2 == 0)
+            console.log(soChan)
+        }
+
+        // Cho một mảng các chuỗi là tên các học viên. Viết hàm lọc ra những học viên có tên bắt đầu bằng chữ H (không phân biệt hoa thường).
+
+        function timChu(arr){
+            let newArr = arr.filter(letter => letter.slice(0,1) == "H" || letter.slice(0,1) == "h")
+            // console.log(newArr)
+            return newArr
+        }
+
+
+        function timChuRand(arr, kyTu){
+            let newArr = arr.filter(letter => letter.slice(0,1) == kyTu)
+            // console.log(newArr)
+            return newArr
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

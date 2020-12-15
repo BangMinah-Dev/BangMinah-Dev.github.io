@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Register</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        form input{
+            margin: 7px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="login.html" method="POST">
+            <input type="text" name="uername" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password ">
+            <input type="button" id="check" onclick="register()" value="REGISTER">
+        </form>
+    </div>
+
+    <script>
+        function register() {
+            let username = document.getElementById("username").value
+            let password = document.getElementById("password").value
+            let confirmPassword = document.getElementById("confirmPassword").value
+
+            let length_username = username.length
+            let length_password = password.length
+
+            if (username == "" || password == "" || confirmPassword == "") {
+                alert("Bạn chưa nhập đầy đủ thông tin")
+            }
+
+            if (length_username > 20) {
+                alert("Username không được vượt quá 20 ký tự")
+            } else if (length_password < 6 || length_password > 32) {
+                alert("Password phải có 6 - 32 ký tự")
+            } else if (confirmPassword != password) {
+                alert("Confirm Password phải giống Password")
+            } else {
+                alert("Đăng ký thành công")
+            }
+        }
+    </script>
+</body>
+
+</html>

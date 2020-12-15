@@ -1,0 +1,10 @@
+/* css */
+
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px;
+}

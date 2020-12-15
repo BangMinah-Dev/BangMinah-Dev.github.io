@@ -1,0 +1,44 @@
+/* css */
+
+*{
+    margin: 0px;
+    line-height: 1.2;
+}
+
+body{
+    background-color: #F4F7FA;
+}
+
+.container{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+}
+
+.content{
+    width: 65%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.line-1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#align-right{
+    text-align: right;
+    padding-top: 20px;
+}
+
+#align-center{
+    text-align: right;
+    padding-right: 55px;
+    padding-bottom: 70px;
+}
