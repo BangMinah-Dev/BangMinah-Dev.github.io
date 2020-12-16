@@ -212,7 +212,5 @@ function tamGiacCan1(h) {
             string[i].toUpperCase()
         }
     }
-    
-
     return newstring
 }
