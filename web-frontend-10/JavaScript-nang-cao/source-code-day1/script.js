@@ -3,10 +3,20 @@
 // Bài 1: tính tổng tất cả các số nguyên nằm giữa chúng
 function tongSoNamGiua(nbr1, nbr2) {
     let sum = 0;
-    for (let i = nbr1; i <= nbr2; i++) {
-        sum += i;
+
+    if(nbr1 < nbr2){
+        for (let i = nbr1 + 1; i < nbr2; i++) {
+            sum += i;
+        }
     }
-    return sum - nbr1 - nbr2;
+    
+    if(nbr1 > nbr2){
+        for (let i = nbr2 + 1; i < nbr1; i++) {
+            sum += i;
+        }
+    }
+    
+    return sum;
 }
 
 // Bài 2: Cho 1 số nguyên dương,
