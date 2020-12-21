@@ -9,7 +9,7 @@ function tongSoNamGiua(nbr1, nbr2) {
             sum += i;
         }
     }
-    
+
     if(nbr1 > nbr2){
         for (let i = nbr2 + 1; i < nbr1; i++) {
             sum += i;
@@ -30,6 +30,14 @@ function tongUocSo(nbr) {
     }
     return sum;
 }
+// let sum = nbr
+// for (let i = 1; i <= nbr / 2; i++) {
+//     if (nbr % i == 0) {
+//         sum += i;
+//     }
+// }
+// return sum;
+
 
 // Bài 3: Cho 1 số nguyên dương,
 // kiểm tra xem số đó có phải là số nguyên tố hay không,

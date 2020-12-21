@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Nang Cao</title>
+    <style>
+        * {
+            line-height: 1.5;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .content {
+            width: 60%;
+            margin: 0 auto;
+            font-size: 1.3em;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .color {
+            font-style: italic;
+            color: darkorange
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Javascript nâng cao</h1>
+        <h3>Ôn tập javascript phần 2</h3>
+        <div class="content">
+            <div>
+                <span>Bài 1:</span>
+                Bài 1: Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với tham số [''aba'',
+                ''aa'', ''ad'', ''c'', ''vcd''] thì kết quả trả về [''aba'', ''vcd''].
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">maxStr()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 2:</span>Viết hàm so sánh mảng, truyền vào 2 mảng bất kỳ (chỉ chứa số nguyên), kết quả trả về
+                là 1 mảng chỉ chứa những phần tử không đồng thời nằm trong 2 mảng truyền vào. Ví dụ truyền vào [1, 2, 3]
+                và [1, 3, 4, 5, 5] thì kết quả trả về là mảng [2, 4, 5, 5].
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">notContain()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 3:</span> Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên tiếp
+                (tính từ 1) theo kiểu ziczac. Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2, 3,
+                4], [8, 7, 6, 5], [9, 10, 11, 12] ].
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">multiArray()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 4:</span> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">avgAge()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 5:</span> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tuổi học viên từ cao đến thấp.
+                từ. Ví dụ:
+                ''HELLO world'' => ''Hello World''.
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">sortAgeDesc()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 6:</span> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">sortName()</span>
+            </div>
+            <hr>
+            <div>
+                <span>Bài 7:</span> Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender:
+                ''Male'', age: 20 }. Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
+                <br>
+                <span>Sử dụng hàm :</span> <span class="color">filterItems()</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
