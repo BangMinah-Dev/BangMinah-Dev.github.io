@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="title">
+                <p>Calculator</p>
+                <div class="icon"><i class="fas fa-sun"></i></div>
+            </div>
+            <div class="monitor">
+                <div class="display" id="display">0</div>
+            </div>
+            <div class="keyboard">
+                
+                    <button class="clear" name="clear" id="clear" value="C">C</button>
+                    <button class="function" name="sqrt" id="sqrt" value=""><i class="fas fa-square-root-alt"></i></button>
+                    <button class="function" name="giaiThua" id="giaiThua" value="">x!</button>
+                    <button class="operator btn-blue" name="percent" id="percent" value=""><i class="fas fa-percentage"></i></button>
+                
+                    <button class="function" name="binhPhuong" id="binhPhuong" value="">x<sup>2</sup></button>
+                    <button class="function" name="btn" id="open_bracket" value="(">(</button>
+                    <button class="function" name="btn" id="close_bracket" value=")">)</button>
+                    <button class="operator btn-blue" name="btn" id="divide" value="÷"><i class="fas fa-divide"></i></button>
+
+                    <button class="number" name="btn" id="nbr_7" value="7">7</button>
+                    <button class="number" name="btn" id="nbr_8" value="8">8</button>
+                    <button class="number" name="btn" id="nbr_9" value="9">9</button>
+                    <button class="operator btn-blue" name="btn" id="multi" value="×"><i class="fas fa-times"></i></button>
+
+                    <button class="number" name="btn" id="nbr_4" value="4">4</button>
+                    <button class="number" name="btn" id="nbr_5" value="5">5</button>
+                    <button class="number" name="btn" id="nbr_6" value="6">6</button>
+                    <button class="operator btn-blue" name="btn" id="sub" value="-"><i class="fas fa-minus"></i></button>
+
+                    <button class="number" name="btn" id="nbr_1" value="1">1</button>
+                    <button class="number" name="btn" id="nbr_2" value="2">2</button>
+                    <button class="number" name="btn" id="nbr_3" value="3">3</button>
+                    <button class="operator btn-blue" name="btn" id="sum" value="+"><i class="fas fa-plus"></i></button>
+
+                    <button class="number" name="btn" id="nbr_0" value="0">0</button>
+                    <button class="number" name="btn" id="comma" value=".">.</button>
+                    <button class="del btn-blue" name="del" id="del" value="del"><i class="fas fa-backspace"></i></button>
+                    <button class="equal btn-blue" name="equal" id="equal" value="="><i class="fas fa-equals"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
