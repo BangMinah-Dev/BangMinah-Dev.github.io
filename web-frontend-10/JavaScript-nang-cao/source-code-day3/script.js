@@ -17,11 +17,11 @@ $(document).ready(function () {
             $(".icon i").removeClass().addClass("fas fa-moon");
             $(".display").css({
                 "background-color": "rgb(36, 39, 49)",
-                "color": "#FFF",
+                color: "#FFF",
             });
             $(".number").css({
                 "background-color": "rgb(36, 39, 49)",
-                "color": "#FFF",
+                color: "#FFF",
             });
             $(".number").hover(
                 function () {
@@ -38,11 +38,11 @@ $(document).ready(function () {
             $(".icon i").removeClass().addClass("fas fa-sun");
             $(".display").css({
                 "background-color": "rgb(255, 255, 255)",
-                "color": "#000",
+                color: "#000",
             });
             $(".number").css({
                 "background-color": "rgb(255, 255, 255)",
-                "color": "#000",
+                color: "#000",
             });
             $(".number").hover(
                 function () {
@@ -56,41 +56,66 @@ $(document).ready(function () {
     });
     // End đổi giao diện
 
-
     //Chức năng
 
-    let display = $(".display")
+    let display = $(".display");
 
-    let _screen = ""
+    let _screen = "";
 
-    let output = ""
+    let output = "";
 
     // Xoá màn hình
-    $(".clear").click(function(){
-        display.html("0")
-        output = ""
-        _screen = ""
-    })
+    $(".clear").click(function () {
+        display.html("0");
+        output = "";
+        _screen = "";
+    });
 
     // Lấy giá trị bàn phím
-    $(".number").click(function(){
-        _screen += this.value
-        display.html(_screen)
-    })
+    $(".number").click(function () {
+        _screen += this.value;
+        display.html(_screen);
+    });
+
+    $(".bracket").click(function () {
+        _screen += this.value;
+        display.html(_screen);
+    });
 
     // Lấy toán tử
-    $(".operator").click(function(){
-        _screen += this.value
-        display.html(_screen)
+    $(".operator").click(function () {
+        _screen += this.value;
+        display.html(_screen);
+    });
+
+    $(".equal").click(function () {
+        display.html(eval(_screen));
+    });
+
+    // Tính căn bậc hai
+    $("#sqrt").click(function () {
+        display.html(Math.sqrt(_screen));
+    });
+
+    // Tính giai thừa
+    $("#giaiThua").click(function () {
+        let giaiThua = 1;
+
+        for (let i = 1; i <= display.html(); i++) {
+            giaiThua *= i;
+        }
+
+        display.html(giaiThua);
+    });
+
+    // Tính phần trăm
+    $("#percent").click(function(){
+        display.html(parseInt(_screen)/ 100)
     })
-    function _replace(){
-        output = _screen.replace("×", "*")
-        output = _screen.replace('÷', '/')
-        display.html(eval(output))
-        console.log(output)
-    }
-    $(".equal").click(function(){
-        _replace()
-        // display.html(eval(output))
+   
+    // Tính bình phương
+    $("#binhPhuong").click(function(){
+        display.html(Math.pow(_screen, 2));
     })
+
 });
