@@ -10,18 +10,19 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="group.ico" type="image/x-icon">
     <title>Thêm học viên</title>
 </head>
 
 <body>
     <div class="container">
         <h1 class="title text-center mt-5 mb-5">Thêm mới học viên</h1>
-        <form>
+        <form action="" method="POST">
             <div class="form-group row">
                 <label for="inputFullName" class="col-sm-2 col-form-label">Họ tên<span
                         class="text-danger ml-1">*</span></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputFullName">
+                    <input type="text" class="form-control" id="inputFullName" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -34,19 +35,19 @@
                 <label for="inputEmail" class="col-sm-2 col-form-label">Email<span
                     class="text-danger ml-1">*</span></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail">
+                    <input type="text" class="form-control" id="inputEmail" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputPhone" class="col-sm-2 col-form-label">Phone<span
                     class="text-danger ml-1">*</span></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPhone">
+                    <input type="text" class="form-control" id="inputPhone" required>
                 </div>
             </div>
             <div class="button d-flex justify-content-center">
-                <a class="btn btn-secondary mr-1" href="index.html"><i class="fas fa-angle-left mr-1"></i>Quay lại</a>
-                <a class="btn btn-success" href=""><i class="fas fa-save mr-1"></i>Lưu</a>
+                <a class="back btn btn-secondary mr-1" href="index.html"><i class="fas fa-angle-left mr-1"></i>Quay lại</a>
+                <button type="submit" class="save btn btn-success"><i class="fas fa-save mr-1"></i>Lưu</button>
             </div>
         </form>
     </div>
