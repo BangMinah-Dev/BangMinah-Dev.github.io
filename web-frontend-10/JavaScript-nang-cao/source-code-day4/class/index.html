@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .round {
+            width: 100px;
+            height: 100px;
+            background-color: darksalmon;
+            margin: 15px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <button class="del">DELETE</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const colors = [
+            '#CCCCCC',
+            '#FF0000',
+            '#FF6600',
+            '#336699',
+            '#666666',
+            '#003366',
+            '#000000',
+            '#FFCC00',
+            '#A0EFF',
+            'red',
+            'dodgerblue',
+            'orange'
+        ]
+
+        $(function () {
+            for (let i = 0; i < colors.length; i++) {
+                const element = $("<div class='round'></div>");
+                element.css("background-color", colors[i]);
+                $(".container").append(element);
+            }
+
+            // $(".round").click(function () {
+            //     $(this).css("display", "none")
+            // })
+
+            $(".round").click(function () {
+                let style = $(this).css("border-style")
+                // console.log(style)
+
+                if (style == "none") {
+                    $(this).css({ "border": "10px solid green" })
+                }
+
+                if (style == "solid")
+                    $(this).css({ "border": "0px none #FFF" })
+
+            })
+
+            $(".del").click(function(){
+                
+            })
+
+        });
+
+    </script>
+</body>
+
+</html>
