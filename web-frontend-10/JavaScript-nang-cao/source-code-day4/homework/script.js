@@ -1,7 +1,7 @@
 // js
 $.ajax({
     method: "GET",
-    url: "https://stdmanagement.herokuapp.com//users",
+    url: "https://stdmanagement.herokuapp.com/users",
 }).done(function (data) {
     for (let i = 0; i < data.length; i++) {
         $("#dataTable").append(
@@ -36,7 +36,7 @@ $.ajax({
 $(".save").click(function () {
     $.ajax({
         method: "POST",
-        url: "https://stdmanagement.herokuapp.com//users",
+        url: "https://stdmanagement.herokuapp.com/users",
         data: {
             name: $("#inputFullName").val(),
             birthday: $("#inputDOB").val(),
