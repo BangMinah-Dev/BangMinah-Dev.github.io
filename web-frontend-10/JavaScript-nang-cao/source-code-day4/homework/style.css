@@ -16,6 +16,7 @@
 }
 .edit:hover{
     color: #17A2B8;
+    cursor: pointer;
 }
 
 .delete{
@@ -23,4 +24,9 @@
 }
 .delete:hover{
     color: #DC3545;
+    cursor: pointer;
+}
+
+.userID{
+    display: none;
 }
