@@ -25,7 +25,7 @@ $.ajax({
         
         $.ajax({
             method: "DELETE",
-            url: "https://stdmanagement.herokuapp.com/" + id,
+            url: "https://stdmanagement.herokuapp.com/users/" + id,
             
         });
         console.log(id)
