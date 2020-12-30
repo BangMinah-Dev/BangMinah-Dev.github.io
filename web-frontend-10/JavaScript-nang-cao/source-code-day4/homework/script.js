@@ -20,7 +20,7 @@ function renderList() {
                             <td>${data[i].email}</td>
                             <td>${data[i].phone}</td>
                             <td>
-                            <a class="edit" href="edit.html" mr-1>
+                            <a class="edit" mr-1 data-id="${data[i].id}" data-name="${data[i].name}" data-birthday="${data[i].birthday}" data-email="${data[i].email}" data-birthday="${data[i].email}" data-phone="${data[i].phone}" data-toggle="modal" data-target="#exampleModal">
                                 <i class="far fa-edit mr-1"></i>Chỉnh sửa
                             </a>
                             |
@@ -32,6 +32,7 @@ function renderList() {
         }
         $("#dataTable").html(content);
         modal();
+        editModal();
     });
 }
 
@@ -79,4 +80,45 @@ $(document).ready(function () {
             window.location.href = "index.html";
         });
     });
+
+
+    
 });
+
+function editModal(){
+    let element = $(".edit")
+    for (let i = 0; i < element.length; i++) {
+        $(element[i]).click(function () {
+
+            let id = $(this).data("id");
+            let name = $(this).data("name");
+            let birthday = $(this).data("birthday");
+            let email = $(this).data("email");
+            let phone = $(this).data("phone");
+
+            $(".btn-primary").attr("id", id)
+            $("#name").val(name);
+            $("#birthday").val(birthday);
+            $("#email").val(email);
+            $("#phone").val(phone);
+        });
+    }
+}
+
+function editItem(){
+    let id = $(".btn-primary").attr("id");
+
+    $.ajax({
+        method: "PUT",
+        url: "https://stdmanagement.herokuapp.com/users/" + id,
+        data: {
+            name: $("#name").val(),
+            birthday: $("#birthday").val(),
+            email: $("#email").val(),
+            phone: $("#phone").val(),
+        },
+    }).done(() => {
+        $(".modal").modal("hide");
+        renderList();
+    });
+}
