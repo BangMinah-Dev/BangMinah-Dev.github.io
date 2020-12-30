@@ -9,3 +9,8 @@ ul + ul- Nhìn ra bên ngoài - Chọn ul ngay sau ul; Nó không phải là nh�
 ul ~ ul- Nhìn ra bên ngoài - Chọn tất cả những ulthứ theo sau ulkhông quan trọng nó ở đâu, nhưng cả hai ulphải có cùng một cha mẹ; Bộ chọn anh chị em chung
 
 https://stackoverflow.com/questions/10782054/what-does-the-tilde-squiggle-twiddle-css-selector-mean
+
+DOM .value : thuộc tính
+jquery .val(): phương thức
+
+confirm 
