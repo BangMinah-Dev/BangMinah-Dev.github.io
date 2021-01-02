@@ -17,7 +17,17 @@
 <body>
     <div class="container">
         <h1 class="title text-center mt-5 mb-5">Danh sách học viên</h1>
-        <a class="btn add btn-success mb-3" href="add.html"><i class="fas fa-plus-circle mr-1"></i>Thêm học viên</a>
+        <div class="d-flex justify-content-between">
+            <a class="btn add btn-success mb-3" href="add.html"><i class="fas fa-plus-circle mr-1"></i>Thêm học viên</a>
+            <div class="input-group search mb-3">
+                <input type="text" id="inputSearch" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button" id="search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>

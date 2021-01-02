@@ -34,3 +34,7 @@ button:focus{
     color: #DC3545;
     cursor: pointer;
 }
+
+.search{
+    width: 30%;
+}

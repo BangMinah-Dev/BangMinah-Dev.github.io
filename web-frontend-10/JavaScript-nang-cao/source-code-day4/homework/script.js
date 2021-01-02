@@ -11,7 +11,12 @@ function renderList() {
         method: "GET",
         url: "https://stdmanagement.herokuapp.com/users",
     }).done(function (data) {
-        let content = "";
+        mainData(data)
+    });
+}
+
+function mainData(data){
+    let content = "";
 
         for (let i = 0; i < data.length; i++) {
             content += `<tr>
@@ -40,7 +45,7 @@ function renderList() {
         $("#dataTable").html(content);
         modal();
         editModal();
-    });
+        search();
 }
 
 function modal() {
@@ -54,7 +59,7 @@ function modal() {
 
             $(".contentModal").text(name);
 
-            $(".btn-danger").attr("id", id)
+            $(".btn-danger").attr("id", id);
         });
     }
 }
@@ -87,23 +92,19 @@ $(document).ready(function () {
             window.location.href = "index.html";
         });
     });
-
-
-    
 });
 
-function editModal(){
-    let element = $(".edit")
+function editModal() {
+    let element = $(".edit");
     for (let i = 0; i < element.length; i++) {
         $(element[i]).click(function () {
-
             let id = $(this).data("id");
             let name = $(this).data("name");
             let birthday = $(this).data("birthday");
             let email = $(this).data("email");
             let phone = $(this).data("phone");
 
-            $(".btn-primary").attr("id", id)
+            $(".btn-primary").attr("id", id);
             $("#name").val(name);
             $("#birthday").val(birthday);
             $("#email").val(email);
@@ -112,14 +113,14 @@ function editModal(){
     }
 }
 
-function editItem(){
+function editItem() {
     let id = $(".btn-primary").attr("id");
 
     $.ajax({
         method: "PUT",
         url: "https://stdmanagement.herokuapp.com/users/" + id,
         data: {
-            id : id,
+            id: id,
             name: $("#name").val(),
             birthday: $("#birthday").val(),
             email: $("#email").val(),
@@ -128,5 +129,20 @@ function editItem(){
     }).done(() => {
         $(".modal").modal("hide");
         renderList();
+    });
+}
+
+function search() {
+    $("#search").click(function () {
+        let result = $("#inputSearch").val();
+        console.log(result);
+        $.ajax({
+            method: "GET",
+            url: `https://stdmanagement.herokuapp.com/users?q=${result}`,
+        }).done( (data) => {
+            mainData(data)
+            
+            console.log(data);
+        });
     });
 }
