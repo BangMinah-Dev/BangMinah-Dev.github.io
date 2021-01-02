@@ -20,12 +20,19 @@ function renderList() {
                             <td>${data[i].email}</td>
                             <td>${data[i].phone}</td>
                             <td>
-                            <a class="edit" mr-1 data-id="${data[i].id}" data-name="${data[i].name}" data-birthday="${data[i].birthday}" data-email="${data[i].email}" data-birthday="${data[i].email}" data-phone="${data[i].phone}" data-toggle="modal" data-target="#exampleModal">
-                                <i class="far fa-edit mr-1"></i>Chỉnh sửa
+                            <a class="edit" mr-1 data-toggle="modal" data-target="#exampleModal"
+                                data-id="${data[i].id}" 
+                                data-name="${data[i].name}" 
+                                data-birthday="${data[i].birthday}" 
+                                data-email="${data[i].email}"  
+                                data-phone="${data[i].phone}">
+                                    <i class="far fa-edit mr-1"></i>Chỉnh sửa
                             </a>
                             |
-                            <a class="delete" data-name="${data[i].name}" id="${idPrefix}${data[i].id}" data-toggle="modal" data-target="#staticBackdrop">
-                                <i class="fas fa-trash-alt mr-1 ml-1"></i>Xóa
+                            <a class="delete" data-toggle="modal" data-target="#staticBackdrop"
+                                data-name="${data[i].name}" 
+                                id="${idPrefix}${data[i].id}">
+                                    <i class="fas fa-trash-alt mr-1 ml-1"></i>Xóa
                             </a>
                             </td>
                         </tr>`;
@@ -112,6 +119,7 @@ function editItem(){
         method: "PUT",
         url: "https://stdmanagement.herokuapp.com/users/" + id,
         data: {
+            id : id,
             name: $("#name").val(),
             birthday: $("#birthday").val(),
             email: $("#email").val(),
