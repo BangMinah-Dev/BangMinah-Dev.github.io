@@ -1,0 +1,51 @@
+/* Index css */
+
+
+.cover .item{
+    height: 670px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.cover .item .bia{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.6;
+    position: absolute;
+}
+
+.ge{
+    /* width: 300px; */
+}
+
+.lo{
+    width: 150px;
+    position: absolute;
+  
+    top: 355px;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+.cover .content{
+    align-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 66%;
+    transform: translate(-50%, -66%);
+}
+
+.cover .content button{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -20px;
+
+    margin: auto;
+}
