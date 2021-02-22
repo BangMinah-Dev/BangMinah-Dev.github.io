@@ -1,84 +1,4 @@
 /***** General Setting *****/
-@font-face {
-    font-family: 'open_sansbold';
-    src: url('../font/OpenSans/opensanopensans-bold-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansbold_italic';
-    src: url('../font/OpenSans/opensans-bolditalic-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansextrabold';
-    src: url('../font/OpenSans/opensans-extrabold-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansextrabold_italic';
-    src: url('../font/OpenSans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-extrabolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansitalic';
-    src: url('../font/OpenSans/opensans-italic-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sanslight';
-    src: url('../font/OpenSans/opensans-light-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sanslight_italic';
-    src: url('../font/OpenSans/opensans-lightitalic-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../font/OpenSans/opensans-regular-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sanssemibold';
-    src: url('../font/OpenSans/opensans-semibold-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'open_sanssemibold_italic';
-    src: url('../font/OpenSans/opensans-semibolditalic-webfont.woff2') format('woff2'),
-         url('../font/OpenSans/opensans-semibolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 * {
@@ -89,9 +9,11 @@
 
 body {
     background-color: #242731;
+    color: #6c5dd3;
 }
 
-.container {
+.container,
+.container-fluid {
     padding: 0;
 }
 /***** General Setting *****/
@@ -106,13 +28,8 @@ body {
 */
 
 /**** Start Navbar *****/
-.navbar .logo {
-    width: 46px;
-    margin-right: 10px;
-}
-
-nav .navbar-brand:hover{
-    color: #FFF;
+.sticky-top{
+    background-color: #242731;
 }
 
 nav {
@@ -121,6 +38,16 @@ nav {
     padding: 2px 0px !important;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+}
+
+
+.navbar .logo {
+    width: 46px;
+    margin-right: 10px;
+}
+
+nav .navbar-brand:hover{
+    color: #FFF;
 }
 
 nav a {
@@ -154,7 +81,7 @@ nav .navbar-toggler-icon{
 }
 
 nav .cart{
-    margin: 0px 12px;
+    margin: 0px 15px 0px 12px;
     font-size: 1rem;
     position: relative;
 }
@@ -164,13 +91,12 @@ nav .cart{
     position: absolute;
     left: 30px;
     top: 0px;
-    background-color: red;
+    background-color: #ff5b2a;
     width: 18px;
     height: 18px;
     text-align: center;
     font-size: 0.7rem;
     border-radius: 3px;
-    padding-top: 1px;
 }
 
 #navbarDropdown::after,
@@ -185,6 +111,16 @@ nav i{
 nav .fa-bars{
     font-size: 25px !important;
 }
+
+nav .fa-caret-down{
+    font-size: 1rem;
+}
+
+nav .dropdown-item:hover{
+    color: #6c5dd3 !important;
+}
+
+
 /**** End Navbar *****/
 
 
@@ -204,8 +140,10 @@ nav .fa-bars{
     }
 
     nav .cart{
-        margin: 0px;
-        font-size: 1rem;
+        margin: 0px 15px 0px 0px;
     }
 
+    nav li{
+        padding: 8px 0px;
+    }
 }
