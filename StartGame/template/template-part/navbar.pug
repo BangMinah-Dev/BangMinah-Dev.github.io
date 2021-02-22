@@ -24,16 +24,19 @@
                 path(d='M6.70459 11.8945C6.75059 11.9687 6.79704 12.0424 6.84542 12.1161C6.75948 12.0879 6.7107 11.995 6.70459 11.8945Z' fill='#5DD5E5')
                 path(d='M7.67674 13.2488C7.46413 13.4713 7.14586 13.5647 6.78352 13.5647C6.12402 13.5647 5.61475 13.2549 5.61475 12.4208V11.0271C5.61475 10.6864 5.70064 10.4324 5.84614 10.2522C5.97336 10.5446 6.1123 10.8352 6.26391 11.1229V12.4208C6.26391 12.8104 6.45402 12.9953 6.78352 12.9953C7.01257 12.9953 7.17919 12.9033 7.25758 12.7128C7.39086 12.8934 7.53075 13.0723 7.67674 13.2488Z' fill='#5DD5E5')
             |   START GAME
-        button.navbar-toggler(
-                                type='button' 
-                                data-toggle='collapse' 
-                                data-target='#navbarSupportedContent' 
-                                aria-controls='navbarSupportedContent' 
-                                aria-expanded='false' 
-                                aria-label='Toggle navigation'
-                            )
-            span.navbar-toggler-icon
-                i.fas.fa-bars
+        div.d-flex.justify-content-end.align-items-center
+            a.nav-link.searchMobile(href='#')
+                        i.fas.fa-search
+            button.navbar-toggler(
+                                    type='button' 
+                                    data-toggle='collapse' 
+                                    data-target='#navbarSupportedContent' 
+                                    aria-controls='navbarSupportedContent' 
+                                    aria-expanded='false' 
+                                    aria-label='Toggle navigation'
+                                )
+                span.navbar-toggler-icon
+                    i.fas.fa-bars
         .collapse.navbar-collapse#navbarSupportedContent
             ul.navbar-nav.ml-auto
                 li.nav-item.active
@@ -41,7 +44,8 @@
                         | Trang chủ 
                 li.nav-item.dropdown
                     a.nav-link.dropdown-toggle#navbarDropdown(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                        | Thể loại
+                        | Thể loại 
+                        i.fas.fa-caret-down
                     .dropdown-menu(aria-labelledby='navbarDropdown')
                         a.dropdown-item(href='#') Hành động
                         a.dropdown-item(href='#') Chiến thuật
@@ -52,12 +56,12 @@
                 li.nav-item
                     a.nav-link(href='#')
                         | Hướng dẫn
-                li.nav-item
-                    a.nav-link(href='#')
+                li.nav-item.function.d-flex
+                    a.nav-link.searchDesktop(href='#')
                         i.fas.fa-search
-                li.nav-item
-                    a.nav-link(href='#')
+                    a.nav-link.cart(href='#')
                         i.fas.fa-shopping-cart
-                li.nav-item.ttt
+                        .noti
+                            span 10
                     a.nav-link(href='#')
                         i.fas.fa-user

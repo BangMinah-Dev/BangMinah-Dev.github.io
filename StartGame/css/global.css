@@ -108,6 +108,11 @@ body {
 /**** Start Navbar *****/
 .navbar .logo {
     width: 46px;
+    margin-right: 10px;
+}
+
+nav .navbar-brand:hover{
+    color: #FFF;
 }
 
 nav {
@@ -125,7 +130,7 @@ nav a {
 }
 
 nav li{
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 nav li:last-child{
@@ -148,6 +153,59 @@ nav .navbar-toggler-icon{
     font-size: 1.5rem;
 }
 
+nav .cart{
+    margin: 0px 12px;
+    font-size: 1rem;
+    position: relative;
+}
 
+.noti{
+    color: #FFF;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 3px;
+    padding-top: 1px;
+}
+
+#navbarDropdown::after,
+#navbarDropdown::before{
+    display: none;
+}
+
+nav i{
+    font-size: 20px;
+}
+
+nav .fa-bars{
+    font-size: 25px !important;
+}
 /**** End Navbar *****/
 
+
+
+/***** Responsive *****/
+
+@media (min-width : 992px){
+    nav .searchMobile{
+        display: none;
+    }
+    
+}
+
+@media (max-width : 992px){
+    nav .searchDesktop{
+        display: none;
+    }
+
+    nav .cart{
+        margin: 0px;
+        font-size: 1rem;
+    }
+
+}
