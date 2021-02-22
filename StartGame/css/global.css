@@ -46,6 +46,10 @@ nav {
     margin-right: 10px;
 }
 
+nav .navbar-brand{
+    margin: 0;
+}
+
 nav .navbar-brand:hover{
     color: #FFF;
 }
@@ -78,6 +82,7 @@ nav .navbar-toggler-icon{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    padding-bottom: 5px;
 }
 
 nav .cart{
@@ -120,6 +125,9 @@ nav .dropdown-item:hover{
     color: #6c5dd3 !important;
 }
 
+nav .searchMobile{
+    display: none;
+}
 
 /**** End Navbar *****/
 
@@ -127,16 +135,13 @@ nav .dropdown-item:hover{
 
 /***** Responsive *****/
 
-@media (min-width : 992px){
-    nav .searchMobile{
-        display: none;
-    }
-    
-}
-
-@media (max-width : 992px){
+@media (max-width: 991.98px){
     nav .searchDesktop{
         display: none;
+    }
+
+    nav .searchMobile{
+        display: block;
     }
 
     nav .cart{

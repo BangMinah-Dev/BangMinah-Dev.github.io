@@ -2,39 +2,120 @@
 /***** Start Cover *****/
 .cover{
     width: 100%;
-    height: 41.875rem;
     overflow: hidden;
-    /* border: 1px solid red; */
     position: relative;
 }
 
-.cover .background{
-    top: 0;
-    left: 0;
+.cover .slide .background{
     width: 100%;
-    filter: brightness(50%);
-    position: relative;
+    filter: opacity(50%);
 }
 
-.cover .gameName{
-    /* width: 100px; */
+.cover .test{
     position: absolute;
-    left: 50%;
-    top: 55%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    align-items: center;
 }
 
-.cover button{
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -75%);
+.cover .slide .gameName img{
+    margin-bottom: 100px;
 }
 
-.cover .gameStudio{
-    position: absolute;
-    bottom: 7%;
-    left: 50%;
-    transform: translate(-50%, -7%);
+.cover .slide .button{
+    margin-bottom: 100px;
 }
+
+.cover .slide .button button{
+    background-color: transparent;
+    border: 1px solid #FFF;
+    padding: 6px 32px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.cover .slide .button button:hover{
+    background-color: #6c5dd3;
+
+}
+
+.cover .slide .gameStudio img{
+    text-align: center;
+}
+
+
+
 /***** End Cover *****/
+
+
+/***** Responsive *****/
+@media (max-width: 1200px){
+    .cover .slide .gameName img{
+        width: 350px;
+        margin-bottom: 60px;
+    }
+    
+    .cover .slide .button{
+        margin-bottom: 60px;
+    }
+
+    .cover .slide .gameStudio img{
+        width: 120px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .cover .slide .gameName img{
+        width: 250px;
+        margin-bottom: 40px;
+    }
+    
+    .cover .slide .button{
+        margin-bottom: 40px;
+    }
+
+    .cover .slide .gameStudio img{
+        width: 80px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .cover .slide .gameName img{
+        width: 250px;
+        margin-bottom: 40px;
+    }
+    
+    .cover .slide .button{
+        margin-bottom: 40px;
+    }
+
+    .cover .slide .gameStudio img{
+        width: 80px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .cover .slide .gameName img{
+        width: 180px;
+        margin-bottom: 20px;
+    }
+    
+    .cover .slide .button{
+        margin-bottom: 15px;
+    }
+
+    .cover .slide .button button{
+        font-size: 12px;
+    }
+
+    .cover .slide .gameStudio img{
+        width: 80px;
+        display: none;
+    }
+}
