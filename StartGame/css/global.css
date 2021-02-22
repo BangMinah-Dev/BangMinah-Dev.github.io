@@ -1,0 +1,153 @@
+/***** General Setting *****/
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../font/OpenSans/opensanopensans-bold-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('../font/OpenSans/opensans-bolditalic-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    src: url('../font/OpenSans/opensans-extrabold-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src: url('../font/OpenSans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-extrabolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../font/OpenSans/opensans-italic-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../font/OpenSans/opensans-light-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('../font/OpenSans/opensans-lightitalic-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../font/OpenSans/opensans-regular-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../font/OpenSans/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('../font/OpenSans/opensans-semibolditalic-webfont.woff2') format('woff2'),
+         url('../font/OpenSans/opensans-semibolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242731;
+}
+
+.container {
+    padding: 0;
+}
+/***** General Setting *****/
+
+/*
+*
+* 
+* 
+* 
+* 
+* 
+*/
+
+/**** Start Navbar *****/
+.navbar .logo {
+    width: 46px;
+}
+
+nav {
+    /* background-color: red; */
+    margin: 0;
+    padding: 2px 0px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+nav a {
+    color: #fff;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+nav li{
+    margin-right: 20px;
+}
+
+nav li:last-child{
+    margin-right: 0;
+}
+
+nav .active .nav-link {
+    color: #6c5dd3 !important;
+}
+
+nav .nav-link:hover {
+    color: #6c5dd3;
+}
+
+nav .navbar-toggler-icon{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+
+/**** End Navbar *****/
+
