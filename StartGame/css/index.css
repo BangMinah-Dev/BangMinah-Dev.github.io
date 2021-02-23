@@ -1,22 +1,20 @@
-
 /***** Start Cover *****/
-.cover{
+.cover {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.cover .slide .background{
+.cover .slide .background {
     width: 100%;
     filter: opacity(50%);
 }
 
-.cover .test{
+.cover .content {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -24,98 +22,340 @@
     align-items: center;
 }
 
-.cover .slide .gameName img{
+.cover .slide .gameName img {
     margin-bottom: 100px;
 }
 
-.cover .slide .button{
+.cover .slide .button {
     margin-bottom: 100px;
 }
 
-.cover .slide .button button{
+.cover .slide .button button {
     background-color: transparent;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     padding: 6px 32px;
-    color: #FFF;
+    color: #fff;
     font-weight: bold;
 }
 
-.cover .slide .button button:hover{
+.cover .slide .button button:hover {
     background-color: #6c5dd3;
-
 }
 
-.cover .slide .gameStudio img{
+.cover .slide .gameStudio img {
     text-align: center;
 }
 
-
-
 /***** End Cover *****/
 
+/***** Start ComingSoon *****/
+
+.slick-slide {
+    margin: 0 15px;
+}
+
+.slick-list {
+    margin: 0 -15px;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.poster {
+    width: 540px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    /* margin: 0px 15px; */
+}
+
+.poster .background {
+    width: 100%;
+    height: 100%;
+    filter: opacity(80%);
+    object-fit: cover;
+}
+
+.poster .box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    background: rgba(111, 111, 111, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.poster .box .content {
+    height: 100%;
+    /* border: 2px solid red; */
+    padding: 10px;
+    color: #fff;
+}
+
+.poster .box .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.poster .box .content .gameName {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.poster .box .content .gamePrice {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.poster .box .content .gameDes {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.poster .box .content .gamePlatform button {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 2px 10px;
+}
+
+.poster .box .content .gameOrder button {
+    border: 1px solid #fff;
+    background-color: #fff;
+    font-weight: bold;
+    color: #6c5dd3;
+    padding: 8px 28px;
+    text-align: center;
+}
+
+/***** End ComingSoon *****/
+
+/*
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+*/
 
 /***** Responsive *****/
-@media (max-width: 1200px){
-    .cover .slide .gameName img{
+@media (max-width: 1199.98px) {
+    .cover .slide .gameName img {
         width: 350px;
         margin-bottom: 60px;
     }
-    
-    .cover .slide .button{
+
+    .cover .slide .button {
         margin-bottom: 60px;
     }
 
-    .cover .slide .gameStudio img{
+    .cover .slide .gameStudio img {
         width: 120px;
     }
+
+    /* Start Coming Soon */
+    .poster .box .content .gameName {
+        font-size: 18px;
+    }
+
+    .poster .box .content .gamePrice {
+        font-size: 22px;
+    }
+    /* End Coming Soon */
 }
 
-@media (max-width: 991.98px){
-    .cover .slide .gameName img{
+@media (max-width: 991.98px) {
+    .cover .slide .gameName img {
         width: 250px;
         margin-bottom: 40px;
     }
-    
-    .cover .slide .button{
+
+    .cover .slide .button {
         margin-bottom: 40px;
     }
 
-    .cover .slide .gameStudio img{
+    .cover .slide .gameStudio img {
+        width: 80px;
+    }
+
+    /* Start Coming Soon */
+
+    .poster .box .content .gameName {
+        font-size: 18px;
+    }
+
+    .poster .box .content .gamePrice {
+        font-size: 22px;
+    }
+
+    .poster .box .content .gamePlatform button {
+        padding: 2px 6px;
+    }
+    /* End Coming Soon */
+}
+
+@media (max-width: 767.98px) {
+    .cover .slide .gameName img {
+        width: 250px;
+        margin-bottom: 40px;
+    }
+
+    .cover .slide .button {
+        margin-bottom: 40px;
+    }
+
+    .cover .slide .gameStudio img {
         width: 80px;
     }
 }
 
-@media (max-width: 767.98px){
-    .cover .slide .gameName img{
-        width: 250px;
-        margin-bottom: 40px;
-    }
-    
-    .cover .slide .button{
-        margin-bottom: 40px;
-    }
-
-    .cover .slide .gameStudio img{
-        width: 80px;
-    }
-}
-
-@media (max-width: 575.98px){
-    .cover .slide .gameName img{
+@media (max-width: 575.98px) {
+    .cover .slide .gameName img {
         width: 180px;
         margin-bottom: 20px;
     }
-    
-    .cover .slide .button{
+
+    .cover .slide .button {
         margin-bottom: 15px;
     }
 
-    .cover .slide .button button{
+    .cover .slide .button button {
         font-size: 12px;
     }
 
-    .cover .slide .gameStudio img{
+    .cover .slide .gameStudio img {
         width: 80px;
         display: none;
+    }
+
+    /* Start Coming Soon */
+
+    .poster .box .content .gameName {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .poster .box .content .gamePrice {
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    /* .poster .box .content .gamePlatform button {
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+
+    .poster .box .content .gameOrder button {
+        font-size: 14px;
+    } */
+
+    .poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel{
+        padding: 0px 15px;
+    }
+
+    /* End Coming Soon */
+
+}
+
+@media (max-width: 524.98px) {
+    .cover .slide .gameName img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .cover .slide .button {
+        margin-bottom: 15px;
+    }
+
+    .cover .slide .button button {
+        font-size: 12px;
+    }
+
+    .cover .slide .gameStudio img {
+        width: 80px;
+        display: none;
+    }
+
+    /* Start Coming Soon */
+
+    .poster .box .content .gameName {
+        font-size: 14px;
+    }
+
+    .poster .box .content .gamePrice {
+        font-size: 16px;
+    }
+
+    .poster .box .content .gameDes {
+        font-size: 14px;
+    }
+
+    .poster .box .content .gamePlatform button {
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+
+    .poster .box .content .gameOrder button {
+        font-size: 14px;
+        /* padding: 4px 8px; */
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel{
+        padding: 0px 15px;
+    }
+    /* End Coming Soon */
+    
+}
+
+@media (max-width: 399.98px){
+    .poster .box .content .gameName {
+        font-size: 16px;
+    }
+
+    .poster .box .content .gamePrice {
+        font-size: 26px;
+    }
+
+    .poster .box .content .gameDes {
+        font-size: 14px;
+        display: none;
+    }
+
+    .poster .box .content .gamePlatform button {
+        font-size: 12px;
+    }
+
+    .poster .box .content .gameOrder button {
+        font-size: 14px;
+    }
+
+    .poster {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel{
+        padding: 0px 15px;
     }
 }
