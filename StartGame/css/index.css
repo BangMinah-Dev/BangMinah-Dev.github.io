@@ -52,6 +52,7 @@
 
 .slick-slide {
     margin: 0 15px;
+    outline: none;
 }
 
 .slick-list {
@@ -71,7 +72,8 @@
     overflow: hidden;
     position: relative;
     border-radius: 12px;
-    /* margin: 0px 15px; */
+    margin: 0px 15px;
+    filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.25));
 }
 
 .poster .background {
@@ -138,6 +140,27 @@
 }
 
 /***** End ComingSoon *****/
+.newGame{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.newGame img{
+    width: 340px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.25))
+}
+
+/***** Start New Game *****/
+
+
+/***** End New Game *****/
+
 
 /*
 * 
@@ -251,15 +274,6 @@
         font-weight: bold;
     }
 
-    /* .poster .box .content .gamePlatform button {
-        font-size: 12px;
-        padding: 2px 6px;
-    }
-
-    .poster .box .content .gameOrder button {
-        font-size: 14px;
-    } */
-
     .poster {
         width: 100%;
         height: auto;
@@ -357,5 +371,17 @@
 
     .carousel{
         padding: 0px 15px;
+    }
+    
+    ul.slick-dots{
+        /* margin-top: -30px; */
+        position: relative;
+        bottom: 0;
+    }
+
+
+    .newGame{
+        padding: 0px 15px;
+        overflow: hidden;
     }
 }
