@@ -340,6 +340,10 @@
     }
     /* End Coming Soon */
     
+    .newGame{
+        padding: 0px 15px;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 399.98px){
