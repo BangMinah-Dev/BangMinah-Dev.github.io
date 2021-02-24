@@ -39,7 +39,7 @@ block content
                 .gameStudio
                     img(src="./img/cover/mihoyo.png", alt="")
     .container 
-        .comingSoon 
+        .comingSoon
             h2 Sắp Phát Hành
         .container.carousel
             .poster  
@@ -101,13 +101,17 @@ block content
         .container 
             .new 
                 h2 Game Mới Đăng
-            .container.newGame 
-                img(src="./img/newgame/11731.jpg", alt="")
-                img(src="./img/newgame/11731.jpg", alt="")
-                img(src="./img/newgame/11731.jpg", alt="")
-                img(src="./img/newgame/11731.jpg", alt="")
-                img(src="./img/newgame/11731.jpg", alt="")
-                img(src="./img/newgame/11731.jpg", alt="")
+            .container.newGame
+                .product
+                    img(src="./img/newgame/11731.jpg", alt="")
+                .product
+                    img(src="./img/newgame/11731.jpg", alt="")
+                .product
+                    img(src="./img/newgame/11731.jpg", alt="")
+            .container.loadMore.d-flex.justify-content-center.mt-5.mb-5
+                button.btn.btn-primary Xem thêm
+
+
 
 block script 
     script(src="./js/index.js") 

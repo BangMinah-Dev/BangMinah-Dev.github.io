@@ -16,6 +16,7 @@ body {
 .container-fluid {
     padding: 0;
 }
+
 /***** General Setting *****/
 
 /*
@@ -83,6 +84,10 @@ nav .navbar-toggler-icon{
     align-items: center;
     font-size: 1.5rem;
     padding-bottom: 5px;
+}
+
+nav .navbar-toggler{
+    padding: 0px 8px;
 }
 
 nav .cart{
