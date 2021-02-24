@@ -172,6 +172,17 @@
 
 }
 
+.loadMore button{
+    background-color: transparent;
+    color: #6c5dd3;
+    border: 1px solid #6c5dd3;
+    padding: 12px 64px;
+}
+
+.loadMore button:hover{
+    background-color: #6c5dd3;
+    color: #fff;
+}
 /***** End New Game *****/
 
 ul.slick-dots{
