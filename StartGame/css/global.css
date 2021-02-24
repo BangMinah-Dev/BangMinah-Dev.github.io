@@ -137,6 +137,78 @@ nav .searchMobile{
 /**** End Navbar *****/
 
 
+/***** Start Footer *****/
+.footer h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+.footer{
+    background-color: #FFF;
+    height: 462px;
+}
+
+.footer .logoBrand .logo {
+    width: 74px;
+}
+
+.footer .logoBrand a{
+    color: #6c5dd3;
+}
+
+.footer .mainMenu{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .mainMenu a{
+    margin: 0px 15px;
+    padding: 15px;
+    font-size: 20px;
+    color: #000;
+}
+
+.footer .mainMenu a:hover{
+    color: #6c5dd3;
+}
+
+.footer a:hover{
+    text-decoration: none;
+}
+
+.footer .socials{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .socials i{
+    font-size: 25px;
+}
+
+.footer .socials a{
+    margin: 0px 40px;
+    color: #797979;
+}
+
+.footer .socials a:hover{
+    color: #6c5dd3;
+}
+
+.footer .line{
+    border-top: 1px solid #C4C4C4;
+}
+
+.footer .designBy {
+    color: #000;
+}
+
+.footer .designBy span{
+    color: #6c5dd3;
+    font-weight: bold;
+}
+/***** End Footer *****/
+
 
 /***** Responsive *****/
 
@@ -155,5 +227,29 @@ nav .searchMobile{
 
     nav li{
         padding: 8px 0px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .footer{
+        height: 500px;
+    }
+
+    .footer .mainMenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 !important;
+    }
+
+    .footer .socials{
+        display: flex;
+        justify-content: center;
+        margin: 5px !important;
+    }
+
+    .footer .socials a{
+        margin: 10px 20px;
     }
 }
