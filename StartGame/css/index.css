@@ -78,6 +78,10 @@ ul.slick-dots{
     margin-bottom: 0;
 }
 
+.comingSoon h2{
+    margin: 30px 0px;
+}
+
 .poster {
     width: 540px;
     height: 280px;
@@ -166,7 +170,8 @@ ul.slick-dots{
 .newGame .product{
     /* width: 350px; */
     width: 100%;
-    height: 163px;
+    /* height: 163px; */
+    height: auto;
     overflow: hidden;
     filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
@@ -191,6 +196,7 @@ ul.slick-dots{
 }
 /***** End New Game *****/
 
+
 /***** Start Blog *****/
 .blogContent{
     display: flex;
@@ -200,6 +206,10 @@ ul.slick-dots{
 .blogContent .blog{
     width: 70%;
     margin: 0 30px 30px 0;
+}
+
+.blogContent .blog h2{
+    margin-bottom: 30px;
 }
 
 .blogContent .blog .box{
@@ -224,21 +234,29 @@ ul.slick-dots{
 
 .blogContent .blog .box .text{
     padding: 24px;
+    text-align: justify;
 }
 
 .blogContent .blog .box .text h4{
     font-size: 18px;
     font-weight: bold;
     color: #000;
+    
 }
 
 .blogContent .blog .box .text p{
     font-size: 16px;
     color: #000;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .blogContent .mostView h2{
     text-align: left;
+    margin-bottom: 30px;
 }
 
 .blogContent .mostView{
@@ -273,6 +291,7 @@ ul.slick-dots{
 .blogContent .mostView .listNew li{
     margin-bottom: 15px;
     color: #FFF;
+    text-align: justify;
 }
 
 .blogContent .mostView .listNew li a{
@@ -285,11 +304,6 @@ ul.slick-dots{
 }
 /***** End Blog *****/
 
-
-/*  */
-
-/*  */
-/*  */
 
 /*
 * 
@@ -364,6 +378,10 @@ ul.slick-dots{
         padding: 2px 6px;
     }
     /* End Coming Soon */
+
+    .newGame .product{
+        height: auto;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -383,8 +401,12 @@ ul.slick-dots{
     /* Start New Game */
 
     .newGame{
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
         padding: 15px;
+    }
+
+    .newGame .product{
+        height: auto;
     }
 
     /* End New Game */
@@ -392,17 +414,51 @@ ul.slick-dots{
     .blogContent{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+    }
+
+    .blogContent h2{
+        padding: 15px;
     }
 
     .blogContent .blog{
         width: 100%;
+        margin: 0px;
+        padding: 0px 15px;
+    }
+
+    .blogContent .blog .box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogContent .blog .box .image{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .blogContent .blog .box .image img{
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
     }
 
     .blogContent .mostView{
         width: 100%;
+        padding: 0px 15px;
     }
+
+    .blogContent .mostView .box .image img{
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .blogContent .mostView .listNew{
+        padding: 15px 15px 0px 30px;
+    }
+    
 }
 
 @media (max-width: 575.98px) {
