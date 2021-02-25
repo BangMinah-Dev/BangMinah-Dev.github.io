@@ -3,6 +3,7 @@
 /***** Start Cover *****/
 .cover {
     width: 100%;
+    /* max-width: 1440px; */
     overflow: hidden;
     position: relative;
 }
@@ -35,7 +36,7 @@
 .cover .slide .button button {
     background-color: transparent;
     border: 1px solid #fff;
-    padding: 6px 32px;
+    padding: 12px 64px;
     color: #fff;
     font-weight: bold;
 }
@@ -52,10 +53,6 @@
 
 /***** Start ComingSoon *****/
 
-.carousel{
-    /* margin: 30px 0px 100px 0px !important; */
-}
-
 .slick-slide {
     margin: 0 15px;
     outline: none;
@@ -70,6 +67,15 @@
 }
 .slick-dots li.slick-active button:before {
     color: #fff;
+}
+
+ul.slick-dots{
+    position: relative;
+    bottom: 0;
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
 }
 
 .poster {
@@ -185,14 +191,102 @@
 }
 /***** End New Game *****/
 
-ul.slick-dots{
-    position: relative;
-    bottom: 0;
+/***** Start Blog *****/
+.blogContent{
+    display: flex;
+    justify-content: space-between;
 }
 
-.slick-dotted.slick-slider{
-    margin-bottom: 0;
+.blogContent .blog{
+    width: 70%;
+    margin: 0 30px 30px 0;
 }
+
+.blogContent .blog .box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #FFF;
+    overflow: hidden;
+    margin: 0 30px 30px 0;
+}
+
+.blogContent .blog .box .image{
+    width: 225px;
+    height: auto;
+}
+
+.blogContent .blog .box .image img{
+    width: 225px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogContent .blog .box .text{
+    padding: 24px;
+}
+
+.blogContent .blog .box .text h4{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.blogContent .blog .box .text p{
+    font-size: 16px;
+    color: #000;
+}
+
+.blogContent .mostView h2{
+    text-align: left;
+}
+
+.blogContent .mostView{
+    width: 30%;
+}
+
+.blogContent .mostView .image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.blogContent .mostView .image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogContent .mostView .text{
+    background-color: #FFF;
+    padding: 12px;
+}
+
+.blogContent .mostView .text h4{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+.blogContent .mostView .listNew{
+    padding: 15px 0px 0px 30px;
+}
+
+.blogContent .mostView .listNew li{
+    margin-bottom: 15px;
+    color: #FFF;
+}
+
+.blogContent .mostView .listNew li a{
+    color: #FFF;
+}
+
+.blogContent .mostView .listNew li a:hover{
+    color: #6c5dd3;
+    text-decoration: none;
+}
+/***** End Blog *****/
+
+
+/*  */
 
 /*  */
 /*  */
@@ -294,6 +388,21 @@ ul.slick-dots{
     }
 
     /* End New Game */
+
+    .blogContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .blogContent .blog{
+        width: 100%;
+    }
+
+    .blogContent .mostView{
+        width: 100%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -363,7 +472,7 @@ ul.slick-dots{
     }
 
     /* Start Coming Soon */
-
+    
     .poster .box .content .gameName {
         font-size: 14px;
     }
@@ -398,6 +507,7 @@ ul.slick-dots{
 }
 
 @media (max-width: 399.98px){
+
     .poster .box .content .gameName {
         font-size: 16px;
     }

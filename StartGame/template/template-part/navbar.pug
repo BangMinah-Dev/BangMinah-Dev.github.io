@@ -26,7 +26,8 @@
             |   START GAME
         div.d-flex.justify-content-end.align-items-center
             a.nav-link.searchMobile(href='#')
-                        i.fas.fa-search
+                button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModal') 
+                    i.fas.fa-search
             button.navbar-toggler(
                                     type='button' 
                                     data-toggle='collapse' 
@@ -40,13 +41,14 @@
         .collapse.navbar-collapse#navbarSupportedContent
             ul.navbar-nav.ml-auto
                 li.nav-item.active
-                    a.nav-link(href='#')
+                    a.nav-link(href='index.html')
                         | Trang chủ 
                 li.nav-item.dropdown
                     a.nav-link.dropdown-toggle#navbarDropdown(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
                         | Thể loại 
                         i.fas.fa-caret-down
                     .dropdown-menu(aria-labelledby='navbarDropdown')
+                        a.dropdown-item(href='category.html') Tất cả
                         a.dropdown-item(href='#') Hành động
                         a.dropdown-item(href='#') Chiến thuật
                         a.dropdown-item(href='#') Nhập vai
@@ -58,10 +60,46 @@
                         | Hướng dẫn
                 li.nav-item.function.d-flex
                     a.nav-link.searchDesktop(href='#')
-                        i.fas.fa-search
+                        button.btn.btn-primary(type='button' data-toggle='modal' data-target='#exampleModal') 
+                            i.fas.fa-search
                     a.nav-link.cart(href='#')
                         i.fas.fa-shopping-cart
                         .noti
                             span 10
                     a.nav-link(href='#')
                         i.fas.fa-user
+                        
+.modal.fade#exampleModal(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title#exampleModalLabel Tìm kiếm
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+            .form-group
+                input.form-control#recipient-name(type='text' placeholder="Nhập tên game cần tìm")
+            .form-group
+                label.col-form-label(for='ram') Ram
+                select.form-control#ram(type='text')
+                    option 4GB
+                    option 8GB
+                    option 16GB
+                    option 32GB
+            .form-group
+                label.col-form-label(for='graphicCard') Card đồ họa
+                select.form-control#graphicCard(type='text')
+                    option RTX 3060Ti
+                    option RTX 3070
+                    option RTX 3080
+                    option RTX 3090
+            .form-group
+                label.col-form-label(for='category') Thể loại
+                select.form-control#category(type='text')
+                    option Chọn thể loại game
+                    option Hành động
+                    option Chiến thuật
+                    option Nhập vai
+      .modal-footer.d-flex.justify-content-center
+        button.btn.btn-primary(type='button') Tìm kiếm             
