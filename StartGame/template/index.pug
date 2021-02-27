@@ -1,4 +1,34 @@
+
 extends template-part/layout.pug
+
+//- Cover
+mixin slide(src_1, src_2, text="FREE TO PLAY", src_3, alt="image")
+    .slide
+        img.background(src = src_1, alt = alt)
+        .content
+            .gameName
+                img(src= src_2, alt = alt)
+            .button
+                button.btn=text
+            .gameStudio
+                img(src=src_3, alt = alt)
+
+//- Product item
+mixin product(src, alt="product image")
+    .product
+        img(src=src, alt=alt)
+
+
+//- New
+mixin blogBox(src, alt="blog image", h4, p)
+    .box 
+        .image 
+            img(src=src, alt=alt)
+        .text 
+            h4=h4
+            p=p
+
+
 
 block title
     title Start Game - Trang Chủ
@@ -8,26 +38,9 @@ block css
     
 block content
     .container-fluid.cover
-        .slide
-            img.background(src='./img/cover/Cover.jpg', alt="")
-            .content
-                .gameName
-                    img(src="./img/cover/Genshin.png", alt="")
-                .button
-                    button.btn
-                        | FREE TO PLAY
-                .gameStudio
-                    img(src="./img/cover/mihoyo.png", alt="")
-        .slide
-            img.background(src='./img/cover/cyberpunk2077characterart.jpg', alt="")
-            .content
-                .gameName
-                    img(src="./img/cover/cyberLogo.png", alt="")
-                .button
-                    button.btn
-                        | FREE TO PLAY
-                .gameStudio
-                    img(src="./img/cover/cyber.png", alt="")
+        +slide('./img/cover/Cover.jpg', "./img/cover/Genshin.png", text, "./img/cover/mihoyo.png")
+        +slide('./img/cover/cyberpunk2077characterart.jpg', "./img/cover/cyberLogo.png", text, "./img/cover/cyber.png")
+
     .container 
         .comingSoon
             h2 Sắp Phát Hành
@@ -92,50 +105,44 @@ block content
             .new 
                 h2 Game Mới Đăng
             .container.newGame
-                .product
-                    img(src="./img/newgame/11731.jpg", alt="")
-                .product
-                    img(src="./img/newgame/11593.jpg", alt="")
-                .product
-                    img(src="./img/newgame/12230.jpg", alt="")
-                .product
-                    img(src="./img/newgame/11685.jpg", alt="")
-                .product
-                    img(src="./img/newgame/11842.jpg", alt="")
-                .product
-                    img(src="./img/newgame/12133.jpg", alt="")
-                .product
-                    img(src="./img/newgame/12188.jpg", alt="")
-                .product
-                    img(src="./img/newgame/12328.jpg", alt="")
-                .product
-                    img(src="./img/newgame/12163.jpg", alt="")
+                +product("./img/newgame/11731.jpg")
+                +product("./img/newgame/11593.jpg")
+                +product("./img/newgame/12230.jpg")
+                +product("./img/newgame/11685.jpg")
+                +product("./img/newgame/11842.jpg")
+                +product("./img/newgame/12133.jpg")
+                +product("./img/newgame/12188.jpg")
+                +product("./img/newgame/12328.jpg")
+                +product("./img/newgame/12163.jpg")
+                +product("./img/newgame/11494.jpg")
+                +product("./img/newgame/7882.jpg")
+                +product("./img/newgame/11659.jpg")
             .container.loadMore.d-flex.justify-content-center.mt-5.mb-5
                 button.btn.btn-primary Xem thêm
         .container
             .blogContent 
                 .blog 
                     h2 Tin tức
-                    .box 
-                        .image 
-                            img(src="./img/blogs/2021012017225667708.jpg", alt="")
-                        .text 
-                            h4 Sự kiện "Kho Báu Mất Dấu": Tìm kho báu để đổi lấy đạo cụ "Tiên Linh Nhỏ Bé"!
-                            p Đến Cổng Đá, nhận bản đồ kho báu và đạo cụ "Tiên Linh Tầm Bảo" từ Ulman. Nhà Lữ Hành có thể xem khu vực kho báu, thu thập "Tiền Xu" để đổi thưởng.
-                    .box 
-                        .image 
-                            img(src="./img/blogs/2021010818065420420.png", alt="")
-                        .text 
-                            h4 Giới thiệu nhân vật trong Genshin Impact [Ganyu: Cảnh Xuân Trong Mộng]
-                            p Mùi hương cam thảo, vị ngọt nhành hoa, khung cảnh gió tuyết, Lưu Ly thoang thoảng.
-                                |Mọi thứ như trong giấc mơ của thiếu nữ mang dòng máu Kỳ Lân.
-                    .box 
-                        .image 
-                            img(src="./img/blogs/lego1.png", alt="")
-                        .text 
-                            h4 150 triệu mảnh ghép và 3 năm làm việc miệt mài, đây là bộ Lego lớn nhất trong lịch sử
-                            p Từ 150 triệu mảnh ghép bé nhỏ, qua bàn tay của những nhà thiết kế, chúng ta đã được một tác phẩm Lego để đời.
-                        
+                    +blogBox("./img/blogs/2021012017225667708.jpg", 
+                             alt = alt, 
+                             'Sự kiện "Kho Báu Mất Dấu": Tìm kho báu để đổi lấy đạo cụ "Tiên Linh Nhỏ Bé"!', 
+                             'Đến Cổng Đá, nhận bản đồ kho báu và đạo cụ "Tiên Linh Tầm Bảo" từ Ulman. Nhà Lữ Hành có thể xem khu vực kho báu, thu thập "Tiền Xu" để đổi thưởng.'
+                            )
+                    +blogBox("./img/blogs/2021010818065420420.png", 
+                             alt = alt, 
+                             'Giới thiệu nhân vật trong Genshin Impact [Ganyu: Cảnh Xuân Trong Mộng]', 
+                             'Mùi hương cam thảo, vị ngọt nhành hoa, khung cảnh gió tuyết, Lưu Ly thoang thoảng.Mọi thứ như trong giấc mơ của thiếu nữ mang dòng máu Kỳ Lân.'
+                            )
+                    +blogBox("./img/blogs/2021010610420732472.png", 
+                             alt = alt, 
+                             'Sự kiện "Kho Báu Mất Dấu": Tìm kho báu để đổi lấy đạo cụ "Tiên Linh Nhỏ Bé"!', 
+                             'Đến Cổng Đá, nhận bản đồ kho báu và đạo cụ "Tiên Linh Tầm Bảo" từ Ulman. Nhà Lữ Hành có thể xem khu vực kho báu, thu thập "Tiền Xu" để đổi thưởng.'
+                            )
+                    +blogBox("./img/blogs/lego1.png", 
+                             alt = alt, 
+                             '150 triệu mảnh ghép và 3 năm làm việc miệt mài, đây là bộ Lego lớn nhất trong lịch sử', 
+                             'Từ 150 triệu mảnh ghép bé nhỏ, qua bàn tay của những nhà thiết kế, chúng ta đã được một tác phẩm Lego để đời.'
+                            )         
                 .mostView
                     h2 Xem nhiều
                     .box
