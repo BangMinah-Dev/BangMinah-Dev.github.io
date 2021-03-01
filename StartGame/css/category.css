@@ -1,0 +1,128 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.grid-item a{
+    color: #000;
+}
+
+.grid-item a:hover{
+    color: #6c5dd3;
+    text-decoration: none;
+}
+
+.grid-item p{
+    padding-bottom: 8px;
+}
+
+.grid-item{
+    background-color: #FFF;
+    color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-item .image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-item .image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.grid-item .content{
+    padding: 10px 15px;
+    background-color: #FFF;
+}
+
+.grid-item .content h4{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.grid-item .content .category{
+    font-size: 14px;
+}
+
+.grid-item .content .platform{
+    padding-left: 2px;
+}
+
+.grid-item .fab.fa-apple{
+    font-size: 1.2rem;
+}
+
+.grid-item .platform a{
+    margin-right: 10px;
+}
+
+.grid-item .content .btnBox .price{
+    background-color: #6c5dd3;
+    color: #FFF;
+    margin-right: 10px;
+    width: calc(100% - 15px);
+    font-size: 20px;
+}
+
+.grid-item .content .btnBox .price:hover{
+    background-color: #5c4bce;
+}
+
+.grid-item .content .btnBox .sale{
+    border-color: #6c5dd3;
+}
+
+
+/* 
+*
+*
+*
+*
+*
+*
+*/
+
+/***** Start resposive *****/
+@media (max-width: 991.98px){
+    .grid{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 767.98px){
+    .grid{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 575.98px){
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 15px;
+        padding: 0px 15px;
+    }
+    
+    .cate{
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 399.98px){
+    .grid-item .content .btnBox{
+        flex-direction: column;
+    }
+
+    .grid-item .content .btnBox .price{
+        background-color: #6c5dd3;
+        color: #FFF;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}

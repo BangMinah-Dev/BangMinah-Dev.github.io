@@ -13,6 +13,21 @@ mixin slide(src_1, src_2, text="FREE TO PLAY", src_3, alt="image")
             .gameStudio
                 img(src=src_3, alt = alt)
 
+//- Poster
+mixin poster(src, name, price, des, alt="image", ...platforms)
+    .poster  
+        img.background(src = src, alt = alt)
+        .box
+            .content
+                .gameName= name
+                .gamePrice= "$ " + price
+                .gameDes= des
+                .gamePlatform
+                    each platform in platforms 
+                        button.btn= platform
+                .gameOrder
+                    button.btn Đăng ký
+
 //- Product item
 mixin product(src, alt="product image")
     .product
@@ -45,62 +60,39 @@ block content
         .comingSoon
             h2 Sắp Phát Hành
         .container.carousel
-            .poster  
-                img.background(src="./img/comingsoon/Red-Dead-Redemption-2.jpg", alt="")
-                .box
-                    .content
-                        .gameName Red Dead Redemption 2
-                        .gamePrice $ 55.99
-                        .gameDes 
-                            | Game phiêu lưu hành động với chủ đề về miền Tây hoang dã, game do Rockstar Games phát hành
-                        .gamePlatform
-                            button.btn Xbox
-                            button.btn PS 5
-                            button.btn PC
-                        .gameOrder
-                            button.btn Đăng ký
-            .poster 
-                img.background(src="./img/comingsoon/Marvel.jpg", alt="")
-                .box
-                    .content
-                        .gameName Marvel's Avengers
-                        .gamePrice $ 12.99
-                        .gameDes 
-                            | Bom tấn phiêu lưu hành động, nơi hội tụ của Biệt đội siêu anh hùng và những cuộc chiến nảy lửa. 
-                        .gamePlatform
-                            button.btn Xbox
-                            button.btn PS 5
-                            button.btn PC
-                        .gameOrder
-                            button.btn Đăng ký
-            .poster 
-                img.background(src="./img/comingsoon/nfsheat.jpg", alt="")
-                .box
-                    .content
-                        .gameName Need for Speed: Heat
-                        .gamePrice $ 9.99
-                        .gameDes 
-                            | Game gồm 127 xe đua thuộc 33 các thương hiệu khác nhau, trong đó có siêu xe Ferrari huyền thoại.
-                        .gamePlatform
-                            button.btn Xbox
-                            button.btn PS 5
-                            button.btn PC
-                        .gameOrder
-                            button.btn Đăng ký
-            .poster 
-                img.background(src="./img/comingsoon/empireOfSin.jpg", alt="")
-                .box
-                    .content
-                        .gameName Empire of Sin
-                        .gamePrice $ 5.99
-                        .gameDes 
-                            | Đưa bạn vào trung tâm của thế giới tội phạm khốc liệt những năm 20 ở Chicago
-                        .gamePlatform
-                            button.btn Xbox
-                            button.btn PS 5
-                            button.btn PC
-                        .gameOrder
-                            button.btn Đăng ký
+            +poster("./img/comingsoon/Red-Dead-Redemption-2.jpg", 
+                    "Red Dead Redemption 2", 
+                    "55.99", 
+                    "Game phiêu lưu hành động với chủ đề về miền Tây hoang dã, game do Rockstar Games phát hành",
+                    "Red Dead Redemption 2",
+                    "Xbox",
+                    "PS 5",
+                    "PC"
+                    )
+            +poster("./img/comingsoon/Marvel.jpg", 
+                    "Marvel's Avengers", 
+                    "12.99", 
+                    "Bom tấn phiêu lưu hành động, nơi hội tụ của Biệt đội siêu anh hùng và những cuộc chiến nảy lửa.",
+                    "Marvel's Avengers",
+                    "PS 5",
+                    "PC"
+                    )
+            +poster("./img/comingsoon/nfsheat.jpg", 
+                    "Need for Speed: Heat", 
+                    "9.99", 
+                    "Game gồm 127 xe đua thuộc 33 các thương hiệu khác nhau, trong đó có siêu xe Ferrari huyền thoại.",
+                    "Need for Speed: Heat",
+                    "PC"
+                    )
+            +poster("./img/comingsoon/empireOfSin.jpg", 
+                    "Empire Of Sin", 
+                    "5.99", 
+                    "Đưa bạn vào trung tâm của thế giới tội phạm khốc liệt những năm 20 ở Chicago.",
+                    "Empire Of Sin",
+                    "Xbox",
+                    "PS 5",
+                    "PC"
+                    )
         .container 
             .new 
                 h2 Game Mới Đăng

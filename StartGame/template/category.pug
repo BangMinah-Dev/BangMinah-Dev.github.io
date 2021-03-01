@@ -4,7 +4,40 @@ block title
     title Start Game - Thể loại
 
 block css
-    link(rel="stylesheet", href="./css/index.css")
+    link(rel="stylesheet", href="./css/category.css")
     
+
+mixin item(category, href="#", src, alt="image", name, price, sale, ...platforms)
+    .grid-item(data-category= category)
+        .image
+            a(href= href) 
+                img(src= src, alt= alt)
+        .content
+            h4.Name
+                a(href= href)= name     
+            p.category 
+                a(href= href)= category
+            p.platform
+                each platform in platforms
+                    a(href= href) 
+                        i(class= platform)
+            .btnBox.d-flex.justify-content-between
+                button.btn.price= "$ " + price
+                button.btn.sale= "-" + sale + "%"
+
 block content
-    h1 THỂ LOẠI
+    .container.cate
+        .leftBox
+            h3 THỂ LOẠI
+        .rightBox
+            h3 Săp xếp theo : 
+    .container.grid
+        +item("Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
+        +item("Hành Động", href, "./img/category/11685.jpg", alt, "Boomerang FU", "9.99", "10", "fab fa-windows", "fab fa-apple")
+        +item("Nhập vai", href, "./img/category/11842.jpg", alt, "Tiny Crack", "5.99", "10", "fab fa-windows", "fab fa-apple")
+        +item("Chiến thuật", href, "./img/category/12021.jpg", alt, "Crystal Charsers", "15.99", "10", "fab fa-windows", "fab fa-apple")
+        +item("Hành Động", href, "./img/category/12314.jpg", alt, "Down in Bermuda", "8.99", "10", "fab fa-windows", "fab fa-apple")        
+    
+block script
+    script(src="./libs/isotope.pkgd.min.js")
+    script(src="./js/category.js") 
