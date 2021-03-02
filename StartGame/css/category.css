@@ -272,9 +272,7 @@
         font-weight: 500;
     }
 
-    .btn.sale{
-        display: none;
-    }
+    
 }
 
 @media (max-width: 399.98px) {
@@ -291,5 +289,9 @@
 
     .cate {
         padding: 30px 15px;
+    }
+
+    .btn.sale{
+        display: none;
     }
 }
