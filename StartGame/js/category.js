@@ -1,9 +1,6 @@
 jplist.init();
 
-window.addEventListener("onload", _onload);
-
-function _onload(){
-    let card = document.getElementsByClassName("grid-item")[0];
+let card = document.getElementsByClassName("grid-item")[0];
     let heightCard = window.getComputedStyle(card);
     let res_card = heightCard.getPropertyValue("height");
     let res_card_0px = res_card.slice(0, -2);
@@ -22,7 +19,6 @@ function _onload(){
         .querySelectorAll(".content");
     for (let i = 0; i < resize_content.length; i++) {
         resize_content[i].style.height = res_card_0px - res_image_0px + "px";
-    }
 }
 
 window.addEventListener("resize", _resize);
