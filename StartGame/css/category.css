@@ -1,134 +1,295 @@
 
-.cate{
-   padding: 30px 0px; 
+
+.cate {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.grid{
+.cate .leftBox{
+    display: flex;
+}
+
+.cate .rightBox{
+    display: flex;
+}
+
+.cate h4{
+    margin: 0;
+    margin-top: 4px;
+}
+
+.cate .leftBox .jplist-dd{
+    width: 180px !important;
+    background-color: transparent !important;
+    color: #FFF !important;
+    font-size: 14px !important;
+    border-radius: 0;
+}
+
+.cate .leftBox .jplist-dd-panel{
+    color: #6c5dd3 !important;
+    font-size: 24px;
+    padding: 0px 15px;
+    transition: none;
+    text-align: left;
+    display: flex;
+}
+
+.cate .leftBox .jplist-dd-panel::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    transition: transform 0.2s;
+    color: #6c5dd3;
+    font-weight:900;
+    padding-top: 3px;
+    margin-left: 10px;
+    float: right;
+}
+
+.jplist-dd-content{
+    box-shadow: none !important;
+    background-color: #242731 !important;
+}
+
+.jplist-dd-item{
+    border: none !important;
+    transition: none !important;
+    font-size: 16px;
+    padding: 12px 16px;
+    font-weight: 500;
+}
+
+.jplist-dd-item:hover{
+    color: #6c5dd3;
+    font-weight: 500;
+}
+
+.cate .rightBox .jplist-dd{
+    width: 135px !important;
+    background-color: transparent !important;
+    color: #FFF !important;
+    font-size: 14px !important;
+    border-radius: 0;
+}
+
+.cate .rightBox .jplist-dd-panel{
+    color: #6c5dd3 !important;
+    font-size: 24px;
+    padding: 0px;
+    transition: none;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cate .rightBox .jplist-dd-panel::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    transition: transform 0.2s;
+    color: #6c5dd3;
+    font-weight:900;
+    padding-top: 3px;
+    margin-left: 10px;
+    float: right;
+}
+
+.cate .rightBox .jplist-dd-content{
+    box-shadow: none !important;
+    background-color: #242731 !important;
+    text-align: right;
+}
+
+.grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 }
 
-.grid-item a{
+.grid-item a {
     color: #000;
 }
 
-.grid-item a:hover{
+.grid-item a:hover {
     color: #6c5dd3;
     text-decoration: none;
 }
 
-.grid-item p{
+.grid-item p {
     padding-bottom: 8px;
 }
 
-.grid-item{
-    background-color: #FFF;
+.grid-item {
+    background-color: #fff;
     color: #000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grid-item .image{
+.grid-item .image {
     width: 100%;
     overflow: hidden;
 }
 
-.grid-item .image img{
+.grid-item .image img {
     width: 100%;
     object-fit: cover;
 }
 
-.grid-item .content{
+.grid-item .content {
     padding: 10px 15px;
-    background-color: #FFF;
+    background-color: #fff;
 }
 
-.grid-item .content h4{
+.grid-item .content h4 {
     font-weight: bold;
     font-size: 16px;
 }
 
-.grid-item .content .category{
+.grid-item .content .category {
     font-size: 14px;
 }
 
-.grid-item .content .platform{
+.grid-item .content .platform {
     padding-left: 2px;
 }
 
-.grid-item .fab.fa-apple{
+.grid-item .fab.fa-apple {
     font-size: 1.2rem;
 }
 
-.grid-item .platform a{
+.grid-item .platform a {
     margin-right: 10px;
 }
 
-.grid-item .content .btnBox .price{
+.grid-item .content .btnBox .price {
     background-color: #6c5dd3;
-    color: #FFF;
+    color: #fff;
     margin-right: 10px;
     width: calc(100% - 15px);
     font-size: 18px;
     padding: 8px 8px;
 }
 
-.grid-item .content .btnBox .price:hover{
+.grid-item .content .btnBox .price:hover {
     background-color: #5c4bce;
 }
 
-.grid-item .content .btnBox .sale{
+.grid-item .content .btnBox .sale {
     border-color: #6c5dd3;
     padding: 4px;
 }
 
-
 /* 
-*
-*
-*
-*
-*
-*
-*/
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 /***** Start resposive *****/
-@media (max-width: 991.98px){
-    .grid{
+@media (max-width: 991.98px) {
+    .grid {
         grid-template-columns: auto auto auto;
     }
 }
 
-@media (max-width: 767.98px){
-    .grid{
+@media (max-width: 767.98px) {
+    .grid {
         grid-template-columns: auto auto;
+    }
+
+    .cate {
+        padding: 30px 0px;
+    }
+
+    .cate .leftBox{
+        display: block;
+    }
+
+    .cate .leftBox .jplist-dd-panel{
+        color: #6c5dd3 !important;
+        font-size: 24px;
+        padding: 0px;
+        transition: none;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .cate .rightBox{
+        display: block;
+    }
+
+    .cate .rightBox .jplist-dd{
+        width: 100% !important;
+    }
+
+    .cate .rightBox .jplist-dd-panel{
+        color: #6c5dd3 !important;
+        font-size: 24px;
+        padding: 0px;
+        transition: none;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
-@media (max-width: 575.98px){
-    .grid{
+@media (max-width: 575.98px) {
+    .grid {
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 15px;
         padding: 0px 15px;
     }
-    
-    .cate{
-        padding: 0px 15px;
+
+    .cate {
+        padding: 30px 15px;
+    }
+
+    .cate h4{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .cate .leftBox .jplist-dd-panel{
+        font-size: 18px;
+    }
+
+    .cate .rightBox .jplist-dd-panel{
+        font-size: 18px;
+    }
+
+    .jplist-dd-item{
+        border: none !important;
+        transition: none !important;
+        font-size: 16px;
+        padding: 12px 0px;
+        font-weight: 500;
+    }
+
+    .btn.sale{
+        display: none;
     }
 }
 
-@media (max-width: 399.98px){
-    .grid-item .content .btnBox{
+@media (max-width: 399.98px) {
+    .grid-item .content .btnBox {
         flex-direction: column;
     }
 
-    .grid-item .content .btnBox .price{
+    .grid-item .content .btnBox .price {
         background-color: #6c5dd3;
-        color: #FFF;
+        color: #fff;
         margin-bottom: 8px;
         width: 100%;
+    }
+
+    .cate {
+        padding: 30px 15px;
     }
 }

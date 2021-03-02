@@ -1,1 +1,1 @@
-
+jplist.init();

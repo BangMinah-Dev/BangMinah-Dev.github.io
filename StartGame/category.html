@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./libs/slick/slick/slick.css">
     <link rel="stylesheet" href="./libs/slick/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./libs/jplist/jplist.styles.css">
     <link rel="stylesheet" href="./css/category.css">
     <title>Start Game - Thể loại</title>
   </head>
@@ -106,75 +107,201 @@
     </div>
     <div class="container cate">
       <div class="leftBox">
-        <h3>THỂ LOẠI</h3>
+        <h4>Thể loại :</h4>
+        <div class="box">
+          <div class="jplist-dd" data-jplist-control="dropdown-filter" data-group="data-group-1" data-name=" name1">
+            <div class="jplist-dd-panel" data-type="panel">Filter by</div>
+            <div class="jplist-dd-content" data-type="content">
+              <div class="jplist-dd-item" data-value="0" data-path="default">Tất cả</div>
+              <div class="jplist-dd-item" data-value="1" data-path=".Action">Hành Động</div>
+              <div class="jplist-dd-item" data-value="2" data-path=".role-playing">Nhập vai</div>
+              <div class="jplist-dd-item" data-value="3" data-path=".strategy">Chiến thuật</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="rightBox">
-        <h3>Săp xếp theo : </h3>
+        <h4>Sắp xếp theo :</h4>
+        <div class="buttons">
+          <div class="jplist-dd" data-jplist-control="dropdown-sort" data-group="data-group-1" data-name="sorttitle">
+            <div class="jplist-dd-panel" data-type="panel">Sort by</div>
+            <div class="jplist-dd-content" data-type="content">
+              <div class="jplist-dd-item" data-path="default" data-selected="true">Mới nhất</div>
+              <div class="jplist-dd-item" data-path=".name" data-order="asc" data-type="text">Tên A-Z</div>
+              <div class="jplist-dd-item" data-path=".name" data-order="desc" data-type="text">Tên Z-A</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container grid">
-      <div class="grid-item" data-category="Hành Động">
-        <div class="image"><a href="#"> <img src="./img/category/7882.jpg" alt="image"/></a></div>
-        <div class="content">
-          <h4 class="Name"><a href="#">Dead &amp; Cells</a></h4>
-          <p class="category"> <a href="#">Hành Động</a></p>
-          <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
-          </p>
-          <div class="btnBox d-flex justify-content-between">
-            <button class="btn price">$ 7.99</button>
-            <button class="btn sale">-10%</button>
+    <div class="container">
+      <div class="grid" data-jplist-group="data-group-1">
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/7882.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Dead &amp; Cells</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 7.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item" data-category="Hành Động">
-        <div class="image"><a href="#"> <img src="./img/category/11685.jpg" alt="image"/></a></div>
-        <div class="content">
-          <h4 class="Name"><a href="#">Boomerang FU</a></h4>
-          <p class="category"> <a href="#">Hành Động</a></p>
-          <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
-          </p>
-          <div class="btnBox d-flex justify-content-between">
-            <button class="btn price">$ 9.99</button>
-            <button class="btn sale">-10%</button>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/11685.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Boomerang FU</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 9.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item" data-category="Nhập vai">
-        <div class="image"><a href="#"> <img src="./img/category/11842.jpg" alt="image"/></a></div>
-        <div class="content">
-          <h4 class="Name"><a href="#">Tiny Crack</a></h4>
-          <p class="category"> <a href="#">Nhập vai</a></p>
-          <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
-          </p>
-          <div class="btnBox d-flex justify-content-between">
-            <button class="btn price">$ 5.99</button>
-            <button class="btn sale">-10%</button>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/11842.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Tiny Crack</div></a></h4>
+            <p class="category role-playing"> <a href="#">Nhập vai</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 5.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item" data-category="Chiến thuật">
-        <div class="image"><a href="#"> <img src="./img/category/12021.jpg" alt="image"/></a></div>
-        <div class="content">
-          <h4 class="Name"><a href="#">Crystal Charsers</a></h4>
-          <p class="category"> <a href="#">Chiến thuật</a></p>
-          <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
-          </p>
-          <div class="btnBox d-flex justify-content-between">
-            <button class="btn price">$ 15.99</button>
-            <button class="btn sale">-10%</button>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12021.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Crystal Charsers</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến Thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 15.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item" data-category="Hành Động">
-        <div class="image"><a href="#"> <img src="./img/category/12314.jpg" alt="image"/></a></div>
-        <div class="content">
-          <h4 class="Name"><a href="#">Down in Bermuda</a></h4>
-          <p class="category"> <a href="#">Hành Động</a></p>
-          <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
-          </p>
-          <div class="btnBox d-flex justify-content-between">
-            <button class="btn price">$ 8.99</button>
-            <button class="btn sale">-10%</button>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12314.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Down in Bermuda</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 8.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/10641.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Bloon TD 6</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 1.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12063.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Resident Evil Resistance</div></a></h4>
+            <p class="category role-playing"> <a href="#">Nhập vai</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 18.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12133.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Anime Studio Tycoon</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 12.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12188.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Watch</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 5.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12348.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Patrol Duty</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 15.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12328.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Rider Joker</div></a></h4>
+            <p class="category role-playing"> <a href="#">Nhập vai</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 2.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12224.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Alba</div></a></h4>
+            <p class="category role-playing"> <a href="#">Nhập vai</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox d-flex justify-content-between">
+              <button class="btn price">$ 3.99</button>
+              <button class="btn sale">-10%</button>
+            </div>
           </div>
         </div>
       </div>
@@ -217,7 +344,7 @@
     <script src="./libs/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./libs/slick/slick/jquery-migrate-1.2.1.min.js"> </script>
     <script src="./libs/slick/slick/slick.min.js"></script>
-    <script src="./libs/isotope.pkgd.min.js"></script>
+    <script src="./libs/jplist/jplist.min.js"></script>
     <script src="./js/category.js"> </script>
   </body>
 </html>

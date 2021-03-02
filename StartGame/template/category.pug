@@ -4,19 +4,22 @@ block title
     title Start Game - Thể loại
 
 block css
+    link(rel="stylesheet", href="./libs/jplist/jplist.styles.css")
     link(rel="stylesheet", href="./css/category.css")
+
     
 
-mixin item(category, href="#", src, alt="image", name, price, sale, ...platforms)
-    .grid-item(data-category= category)
+mixin item(category, theLoai, href="#", src, alt="image", name, price, sale, ...platforms)
+    .grid-item(data-jplist-item)
         .image
             a(href= href) 
                 img(src= src, alt= alt)
         .content
             h4.Name
-                a(href= href)= name     
-            p.category 
-                a(href= href)= category
+                a(href= href)
+                    .name= name     
+            p.category(class= category) 
+                a(href= href)= theLoai
             p.platform
                 each platform in platforms
                     a(href= href) 
@@ -28,16 +31,39 @@ mixin item(category, href="#", src, alt="image", name, price, sale, ...platforms
 block content
     .container.cate
         .leftBox
-            h3 THỂ LOẠI
+            h4 Thể loại :
+            .box
+                .jplist-dd(data-jplist-control='dropdown-filter' data-group='data-group-1' data-name=' name1')
+                    .jplist-dd-panel(data-type='panel') Filter by
+                    .jplist-dd-content(data-type='content')
+                        .jplist-dd-item(data-value='0' data-path='default') Tất cả
+                        .jplist-dd-item(data-value='1' data-path='.Action') Hành Động
+                        .jplist-dd-item(data-value='2' data-path='.role-playing') Nhập vai
+                        .jplist-dd-item(data-value='3' data-path='.strategy') Chiến thuật
         .rightBox
-            h3 Săp xếp theo : 
-    .container.grid
-        +item("Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
-        +item("Hành Động", href, "./img/category/11685.jpg", alt, "Boomerang FU", "9.99", "10", "fab fa-windows", "fab fa-apple")
-        +item("Nhập vai", href, "./img/category/11842.jpg", alt, "Tiny Crack", "5.99", "10", "fab fa-windows", "fab fa-apple")
-        +item("Chiến thuật", href, "./img/category/12021.jpg", alt, "Crystal Charsers", "15.99", "10", "fab fa-windows", "fab fa-apple")
-        +item("Hành Động", href, "./img/category/12314.jpg", alt, "Down in Bermuda", "8.99", "10", "fab fa-windows", "fab fa-apple")        
+            h4 Sắp xếp theo :
+            .buttons
+                .jplist-dd(data-jplist-control='dropdown-sort' data-group='data-group-1' data-name='sorttitle')
+                    .jplist-dd-panel(data-type='panel') Sort by
+                    .jplist-dd-content(data-type='content')
+                        .jplist-dd-item(data-path='default' data-selected='true') Mới nhất
+                        .jplist-dd-item(data-path='.name' data-order='asc' data-type='text') Tên A-Z
+                        .jplist-dd-item(data-path='.name' data-order='desc' data-type='text') Tên Z-A
+    .container
+        .grid(data-jplist-group='data-group-1')
+            +item("Action", "Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("Action", "Hành Động", href, "./img/category/11685.jpg", alt, "Boomerang FU", "9.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("role-playing", "Nhập vai", href, "./img/category/11842.jpg", alt, "Tiny Crack", "5.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("strategy", "Chiến Thuật", href, "./img/category/12021.jpg", alt, "Crystal Charsers", "15.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("Action", "Hành Động", href, "./img/category/12314.jpg", alt, "Down in Bermuda", "8.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("strategy", "Chiến thuật", href, "./img/category/10641.jpg", alt, "Bloon TD 6", "1.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("role-playing", "Nhập vai", href, "./img/category/12063.jpg", alt, "Resident Evil Resistance", "18.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("strategy", "Chiến thuật", href, "./img/category/12133.jpg", alt, "Anime Studio Tycoon", "12.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("Action", "Hành Động", href, "./img/category/12188.jpg", alt, "Watch", "5.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("strategy", "Chiến thuật", href, "./img/category/12348.jpg", alt, "Patrol Duty", "15.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("role-playing", "Nhập vai", href, "./img/category/12328.jpg", alt, "Rider Joker", "2.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("role-playing", "Nhập vai", href, "./img/category/12224.jpg", alt, "Alba", "3.99", "10", "fab fa-windows", "fab fa-apple")        
     
 block script
-    script(src="./libs/isotope.pkgd.min.js")
+    script(src="./libs/jplist/jplist.min.js")
     script(src="./js/category.js") 
