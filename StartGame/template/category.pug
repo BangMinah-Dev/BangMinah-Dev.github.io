@@ -24,9 +24,11 @@ mixin item(category, theLoai, href="#", src, alt="image", name, price, sale, ...
                 each platform in platforms
                     a(href= href) 
                         i(class= platform)
-            .btnBox.d-flex.justify-content-between
+            .btnBox
                 button.btn.price= "$ " + price
-                button.btn.sale= "-" + sale + "%"
+            .discount
+                .sale
+                    p= "-" + sale + "%"
 
 block content
     .container.cate
@@ -50,15 +52,15 @@ block content
                         .jplist-dd-item(data-path='.name' data-order='asc' data-type='text') Tên A-Z
                         .jplist-dd-item(data-path='.name' data-order='desc' data-type='text') Tên Z-A
     .container
-        .grid(data-jplist-group='data-group-1')
+        .grid#grid(data-jplist-group='data-group-1')
             +item("Action", "Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
             +item("Action", "Hành Động", href, "./img/category/11685.jpg", alt, "Boomerang FU", "9.99", "10", "fab fa-windows", "fab fa-apple")
             +item("role-playing", "Nhập vai", href, "./img/category/11842.jpg", alt, "Tiny Crack", "5.99", "10", "fab fa-windows", "fab fa-apple")
             +item("strategy", "Chiến Thuật", href, "./img/category/12021.jpg", alt, "Crystal Charsers", "15.99", "10", "fab fa-windows", "fab fa-apple")
             +item("Action", "Hành Động", href, "./img/category/12314.jpg", alt, "Down in Bermuda", "8.99", "10", "fab fa-windows", "fab fa-apple")        
             +item("strategy", "Chiến thuật", href, "./img/category/10641.jpg", alt, "Bloon TD 6", "1.99", "10", "fab fa-windows", "fab fa-apple")        
-            +item("role-playing", "Nhập vai", href, "./img/category/12063.jpg", alt, "Resident Evil Resistance", "18.99", "10", "fab fa-windows", "fab fa-apple")        
-            +item("strategy", "Chiến thuật", href, "./img/category/12133.jpg", alt, "Anime Studio Tycoon", "12.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("role-playing", "Nhập vai", href, "./img/category/12063.jpg", alt, "Resident Evil", "18.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("strategy", "Chiến thuật", href, "./img/category/12133.jpg", alt, "Anime Studio", "12.99", "10", "fab fa-windows", "fab fa-apple")        
             +item("Action", "Hành Động", href, "./img/category/12188.jpg", alt, "Watch", "5.99", "10", "fab fa-windows", "fab fa-apple")        
             +item("strategy", "Chiến thuật", href, "./img/category/12348.jpg", alt, "Patrol Duty", "15.99", "10", "fab fa-windows", "fab fa-apple")        
             +item("role-playing", "Nhập vai", href, "./img/category/12328.jpg", alt, "Rider Joker", "2.99", "10", "fab fa-windows", "fab fa-apple")        
