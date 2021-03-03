@@ -2,14 +2,14 @@
 extends template-part/layout.pug
 
 //- Cover
-mixin slide(src_1, src_2, text="FREE TO PLAY", src_3, alt="image")
+mixin slide(src_1, src_2, href="#", text="FREE TO PLAY", src_3, alt="image")
     .slide
         img.background(src = src_1, alt = alt)
         .content
             .gameName
                 img(src= src_2, alt = alt)
             .button
-                button.btn=text
+                a(href= href).btn=text
             .gameStudio
                 img(src=src_3, alt = alt)
 
@@ -53,8 +53,8 @@ block css
     
 block content
     .container-fluid.cover
-        +slide('./img/cover/Cover.jpg', "./img/cover/Genshin.png", text, "./img/cover/mihoyo.png")
-        +slide('./img/cover/cyberpunk2077characterart.jpg', "./img/cover/cyberLogo.png", text, "./img/cover/cyber.png")
+        +slide('./img/cover/Cover.jpg', "./img/cover/Genshin.png", "product.html", text, "./img/cover/mihoyo.png")
+        +slide('./img/cover/cyberpunk2077characterart.jpg', "./img/cover/cyberLogo.png", href, text, "./img/cover/cyber.png")
 
     .container 
         .comingSoon

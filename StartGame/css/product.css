@@ -1,0 +1,131 @@
+
+body{
+    color: #FFF;
+}
+
+.cover {
+    width: 100%;
+    position: relative;
+}
+
+.cover .background img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: opacity(90%);
+}
+
+.cover .video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cover .video .fa-play-circle{
+    font-size: 150px;
+    color: #FFF;
+}
+
+.cover .title{
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 150px;
+}
+
+.cover .title .leftBox{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    color: #FFF;
+}
+
+.cover .title .rightBox{
+    position: absolute;
+    background-color: #FFF;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cover .title .rightBox p{
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cover .title .rightBox .btn{
+    background-color: #6C5DD3;
+    color: #FFF;
+    width: 100%;
+}
+
+.carousel{
+    margin-top: 170px;
+}
+
+.carousel .image{
+    height: 180px;
+    overflow: hidden;
+}
+
+.carousel .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slick-slide {
+    margin: 0 15px;
+    outline: none;
+}
+
+.slick-list {
+    margin: 0 -15px;
+}
+
+.intro{
+    padding: 0px 15px;
+}
+
+.intro .leftContent{
+    overflow: hidden;
+}
+
+.intro .leftContent img{
+    width: 100%;
+}
+
+.line{
+    border-top: 1px solid #C4C4C4;
+}
+
+table{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+tr{
+    height: 50px;
+}
+
+tr > td:first-child{
+    width: 140px;
+    font-weight: bold;
+}
+
+td{
+    vertical-align: top;
+    padding: 10px 0px;
+}
+
+
+.color{
+    color: #6C5DD3;
+}

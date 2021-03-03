@@ -1,0 +1,112 @@
+extends template-part/layout.pug
+
+block title
+    title Start Game - Genshin Impact
+
+block css
+    link(rel="stylesheet", href="./libs/magnific/magnific-popup.min.css")
+    link(rel="stylesheet", href="./css/product.css")
+
+mixin image-item(link, alt="image")
+    .image
+        a.image-link(href= link)
+            img(src= link, alt= alt)
+
+mixin intro(h4 , src , text)
+    h4.mt-5.mb-4= h4
+    img(src= src, alt="image")
+    p.mt-3.mb-5= text
+
+block content
+    .container-fluid.cover 
+        .background 
+            img(src="./img/products/Ningguang.png", alt="image")
+        .video
+            a.video-link(href='https://www.youtube.com/watch?v=1TRFPx09j_8')
+                i.far.fa-play-circle
+                .mfp-hide
+                    iframe(width='1280' height='720' src='https://www.youtube.com/embed/1TRFPx09j_8' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+        .container.title
+            .leftBox
+                h2 GENSHIN IMPACT
+                p Mihoyo
+            .rightBox
+                p $ 29.99
+                a.btn Mua Ngay 
+    .container.carousel
+        +image-item("./img/products/2020092417575257734.jpg")
+        +image-item("./img/products/2020092417575221927.jpg")
+        +image-item("./img/products/maxresdefault.jpg")
+    
+    .container.intro 
+        h2.mt-5.mb-5 Giới thiệu
+        .content.row
+            .leftContent.col-lg-8.col-md-7.col-sm-12
+                +intro("Cuộc phiêu lưu giả tưởng đậm chất sử thi",
+                       "./img/products/2020092418400075313.png",
+                       "Trải nghiệm cảm giác mạo hiểm cá nhân. Trong vai trò là Nhà Lữ Hành đến từ thế giới khác, bạn bước vào hành trình tìm lại chính mình và người thân mất tích."
+                       )
+                +intro("Khám phá thế giới của riêng bạn",
+                       "./img/products/2020092418400431809.png",
+                       "Bay qua đại lục rộng lớn, vẫy vùng cùng sóng nước, vượt qua núi non trùng điệp. Đặt chân đến những nơi vắng bóng người, khám phá hết thảy những điều kỳ bí đang ẩn giấu trong thế giới tràn đầy kỳ tích này."
+                       )
+                +intro("Khám phá một mình hoặc cùng nhau chiến đấu",
+                       "./img/products/2020092418412067196.png", "Bạn có thể chiến đấu một mình, hoặc mời bạn bè tham gia tổ đội 4 người đánh bại những kẻ thù khó nhằn (PS4, iOS, Android, PC)"
+                       )
+                +intro("Điều khiển bảy loại nguyên tố",
+                       "./img/products/2020092418412659408.png",
+                       "Không đơn giản là game chiến đấu thông thường, trong thế giới mở của Genshin Impact, bạn có thể linh hoạt, khéo léo sử dụng sức mạnh nguyên tố đánh bại cường địch và giải mã những câu đố phức tạp."
+                       )
+                +intro("Xây dựng đội ngũ của riêng mình",
+                       "./img/products/genshin_13_4K.jpg",
+                       "Chọn người đồng hành cùng bạn. Với hơn 20 nhân vật (còn tiếp tục cập nhật) cùng những sức mạnh, cá tính và phong cách chiến đấu riêng biệt, hãy chọn thành viên phù hợp với đội hình của bạn."
+                       )
+            .rightContent.col-lg-4.col-md-5.col-sm-12.mt-5
+                table.mt-5
+                    tr 
+                        td Thể loại :
+                        td Nhập vai, hành động
+                    tr 
+                        td Năm phát hành :
+                        td 2020
+                    tr 
+                        td Nhà phát hành :
+                        td Mihoyo
+                .line.mt-4.mb-5 
+                h5 Cáu hình tối thiểu
+                table.mb-5 
+                    tr 
+                        td.color Hệ điều hành : 
+                        td Windows 8.1 64 bit hoặc Windows 10 64 bit 
+                    tr 
+                        td.color CPU : 
+                        td Intel Core i5 hoặc tương đương
+                    tr 
+                        td.color Card đồ họa : 
+                        td NVIDIA® GeForce® GT 1030 hoặc tương đương
+                    tr 
+                        td.color DirectX :
+                        td Phiên bản DirectX 11
+                    tr 
+                        td.color Bộ nhớ trống : 
+                        td 30GB
+                h5 Cáu hình đề nghị
+                table 
+                    tr 
+                        td.color Hệ điều hành : 
+                        td Windows 8.1 64 bit hoặc Windows 10 64 bit 
+                    tr 
+                        td.color CPU : 
+                        td Intel Core i5 hoặc tương đương
+                    tr 
+                        td.color Card đồ họa : 
+                        td NVIDIA® GeForce® GT 1030 hoặc tương đương
+                    tr 
+                        td.color DirectX :
+                        td Phiên bản DirectX 11
+                    tr 
+                        td.color Bộ nhớ trống : 
+                        td 30GB
+block script
+    script(src="./libs/magnific/jquery.magnific-popup.min.js")
+    script(src="./js/product.js") 

@@ -33,7 +33,7 @@
     margin-bottom: 100px;
 }
 
-.cover .slide .button button {
+.cover .slide .button .btn {
     background-color: transparent;
     border: 1px solid #fff;
     padding: 12px 64px;
@@ -41,7 +41,7 @@
     font-weight: bold;
 }
 
-.cover .slide .button button:hover {
+.cover .slide .button .btn:hover {
     background-color: #6c5dd3;
 }
 

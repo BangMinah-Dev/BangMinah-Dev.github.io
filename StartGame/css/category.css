@@ -4,6 +4,10 @@
     padding: 30px 0px;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 30px;
+    background-color: #242731;
+    z-index: 18;
 }
 
 .cate .leftBox{
@@ -149,7 +153,7 @@
 .grid-item .content h4 {
     font-weight: bold;
     font-size: 16px;
-    padding-right: 55px;
+    padding-right: 60px;
     width: 100%;
 }
 
@@ -192,7 +196,7 @@
     height: 40px;
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 15px;
     z-index: 17;
 }
 

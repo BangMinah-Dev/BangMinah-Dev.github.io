@@ -10,10 +10,6 @@ let card = document.getElementsByClassName("grid-item")[0];
     let res_image = heightImage.getPropertyValue("height");
     let res_image_0px = res_image.slice(0, -2);
 
-    // let content = document.getElementsByClassName("content")[0]
-    // let heightContent = window.getComputedStyle(content);
-    // let res_content = heightContent.getPropertyValue("height")
-
     let resize_content = document
         .getElementById("grid")
         .querySelectorAll(".content");
@@ -34,9 +30,6 @@ function _resize() {
     let res_image = heightImage.getPropertyValue("height");
     let res_image_0px = res_image.slice(0, -2);
 
-    // let content = document.getElementsByClassName("content")[0]
-    // let heightContent = window.getComputedStyle(content);
-    // let res_content = heightContent.getPropertyValue("height")
 
     let resize_content = document
         .getElementById("grid")
