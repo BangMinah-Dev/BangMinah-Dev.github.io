@@ -60,6 +60,19 @@ body{
     border-radius: 5px;
     padding: 15px 20px;
     box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
+    transition: width .5s ease-in-out;
+}
+
+.cover .title .rightBox:hover{
+    position: absolute;
+    background-color: #FFF;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
 }
 
 .cover .title .rightBox p{
@@ -77,6 +90,7 @@ body{
 
 .carousel{
     margin-top: 170px;
+    padding: 15px;
 }
 
 .carousel .image{
@@ -96,6 +110,35 @@ body{
 }
 
 .slick-list {
+    margin: 0 -15px;
+}
+
+.carousel .slick-list{
+    padding: 10px 0px;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+ul.slick-dots{
+    position: relative;
+    bottom: 0;
+}
+
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
+}
+
+.slick-slide {
+    margin: 0 15px;
+    outline: none;
+}
+
+.carousel .slick-list {
     margin: 0 -15px;
 }
 

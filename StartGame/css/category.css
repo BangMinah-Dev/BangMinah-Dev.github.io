@@ -1,7 +1,7 @@
 
 
 .cate {
-    padding: 30px 0px;
+    padding: 30px 0px 10px 0px;
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -109,6 +109,7 @@
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    padding: 20px 0px;
 }
 
 .grid-item a {
@@ -248,16 +249,18 @@
 @media (max-width: 991.98px) {
     .grid {
         grid-template-columns: auto auto auto;
+        padding: 20px 0px;
     }
 }
 
 @media (max-width: 767.98px) {
     .grid {
         grid-template-columns: auto auto;
+        padding: 20px 0px;
     }
 
     .cate {
-        padding: 30px 0px;
+        padding: 30px 0px 10px 0px;
     }
 
     .cate .leftBox{
@@ -298,11 +301,11 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 15px;
-        padding: 0px 15px;
+        padding: 20px 15px;
     }
 
     .cate {
-        padding: 30px 15px;
+        padding: 30px 15px 10px 15px;
     }
 
     .cate h4{
@@ -326,7 +329,6 @@
         font-weight: 500;
     }
 
-    
 }
 
 @media (max-width: 399.98px) {
@@ -335,7 +337,8 @@
     }
 
     .cate {
-        padding: 30px 15px;
+        padding: 30px 15px 10px 15px;
+
     }
 
 }
