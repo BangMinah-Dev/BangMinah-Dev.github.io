@@ -5,13 +5,37 @@ block title
 
 block css
     link(rel="stylesheet", href="./css/shoppingCart.css")
+    //- link(rel="stylesheet", href="./libs/jplist/jplist.styles.css")
+    link(rel="stylesheet", href="./css/category.css")
+
+
+mixin item(category, theLoai, href="#", src, alt="image", name, price, sale, ...platforms)
+    .grid-item(data-jplist-item)
+        .image
+            a(href= href) 
+                img(src= src, alt= alt)
+        .content
+            h4.Name
+                a(href= href)
+                    .name= name     
+            p.category(class= category) 
+                a(href= href)= theLoai
+            p.platform
+                each platform in platforms
+                    a(href= href) 
+                        i(class= platform)
+            .btnBox
+                button.btn.price= "$ " + price
+            .discount
+                .sale
+                    p= "-" + sale + "%"
 
 block content
-    .container
+    .container.yourOrder
         h2 Đơn hàng của bạn
     .container 
         .row 
-            .leftBox.col-xl-7.col-lg-8.col-md-12
+            .leftBox.col-xl-7.col-lg-7.col-md-12
                 ._border
                     .item.mb-3 
                         .image
@@ -34,7 +58,7 @@ block content
                     .total.mb-2 
                         span Tất cả giá đã bao gồm VAT nếu có.
                         p Tổng đơn hàng : $ 34.98
-            .rightBox.col-xl-5.col-lg-4.col-md-12
+            .rightBox.col-xl-5.col-lg-5.col-md-12
                 .payment 
                     h3 Nhập thông tin thanh toán
                     .info
@@ -66,27 +90,42 @@ block content
                                             stop(stop-color='#DE0D3D')
                                             stop(offset='1' stop-color='#E30138')
                             .text Thẻ tín dụng / ghi nợ
-                        form(action="")
+                        form(action="" method="POST")
                             .group
-                                label(for="") Số thẻ
-                                input(type="text")
+                                label(for="input_1") Số thẻ
+                                input#input_1(type="text" placeholder="1234 5678 8765 4321")
                             .line2 
                                 .group
-                                    label(for="") Số thẻ
-                                    input(type="text")
+                                    label(for="input_2") Ngày hết hạn
+                                    input#input_2(type="text" placeholder="MM/YY")
                                 .group.ml-4
-                                    label(for="") Số thẻ
-                                    input(type="text")
+                                    label(for="input_3") CVC/ CVV
+                                    input#input_3(type="text" placeholder="123")
                             .group
-                                label(for="") Số thẻ
-                                input(type="text")
+                                label(for="input_4") Tên chủ thẻ
+                                input#input_4(type="text" placeholder="Ex. Tran Van A")
                             .group
-                                label(for="") Số thẻ
-                                input(type="text")
+                                label(for="input_5") Địa chỉ email
+                                input#input_5(type="text" placeholder="Ex. tranvana@email.com")
                             .ckBox 
-                                input(type="checkbox", name="" id="checkbox")
-                                label(for="checkbox") Lưu cho lần thanh toán tiếp theo
-                            .policy.mb-4 
+                                input#checkBox(type="checkbox", name="")
+                                label(for="checkBox") Lưu cho lần thanh toán tiếp theo
+                            .policy.mb-4.mt-4 
                                 p Mã thông báo thanh toán được mã hóa an toàn sẽ được tạo sau khi ngân hàng của bạn chấp thuận giao dịch mua. Chúng tôi không lưu trữ chi tiết thẻ của bạn trực tiếp trong cơ sở dữ liệu của chúng tôi
+                            .total 
+                                p $ 34.98
+                                button.btn.confirm(type="button") Thanh toán đơn hàng 
+    .container.alsoLike.mt-5 
+        h2 Có thể bạn cũng thích
+        .grid#grid(data-jplist-group='data-group-1')
+            +item("Action", "Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("Action", "Hành Động", href, "./img/category/11685.jpg", alt, "Boomerang FU", "9.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("strategy", "Chiến Thuật", href, "./img/category/12320.jpg", alt, "Outcast In Mars", "10.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("strategy", "Chiến Thuật", href, "./img/category/12021.jpg", alt, "Crystal Charsers", "15.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("Action", "Hành Động", href, "./img/category/12314.jpg", alt, "Down Bermuda", "8.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("strategy", "Chiến Thuật", href, "./img/category/12221.jpg", alt, "The First Friend", "19.99", "10", "fab fa-windows", "fab fa-apple")        
+            +item("role-playing", "Nhập vai", href, "./img/category/12063.jpg", alt, "Resident Evil", "18.99", "10", "fab fa-windows", "fab fa-apple")
+            +item("strategy", "Chiến thuật", href, "./img/category/12133.jpg", alt, "Anime Studio", "12.99", "10", "fab fa-windows", "fab fa-apple")        
+
 block script
     script(src="./js/shoppingCart.js") 

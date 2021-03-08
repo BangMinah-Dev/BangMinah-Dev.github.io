@@ -32,7 +32,7 @@ $(document).ready(function () {
 //     let start = $("#title").offset().top
     
 //     let x = window.scrollY + document.querySelector('#title').getBoundingClientRect().top // Y
-//     let xx = window.scrollY + document.querySelector('body').getBoundingClientRect().top // Y
+//     // let xx = window.scrollY + document.querySelector('html').getBoundingClientRect().top // Y
 
 
 //     let _body = $(window).scrollTop()
@@ -45,13 +45,43 @@ $(document).ready(function () {
 
 //     }
 //     console.log(x)
-//     console.log("body" + xx)
+//     // console.log("body " + xx)
 
 // }
 
+
+window.onscroll = function(){
+    scrollFunction()
+}
+
+function scrollFunction(){
+    
+    // let y = window.scrollY
+    // let y_html = document.querySelector('html').getBoundingClientRect().top
+
+    // let y_html = window.scrollY + document.querySelector('#tieuDe').getBoundingClientRect().top
+
+    let _html = document.querySelector("html").scrollTop
+
+    let el = document.getElementById("title").offsetTop
+
+    let navW = $(".navbar").width()
+    $(".effect").css("width", (navW - 30)+"px")
+
+    if(_html > (el)){
+
+        $('#rightBox').addClass("effect");
+        // $('#leftBox').addClass("leftBox")
+    }else{
+        $('#rightBox').removeClass("effect");
+        // $('#leftBox').removeClass("leftBox")
+        $("#rightBox").css("width", "70%")
+    }
+}
+
 $(document).ready(function () {
     $(".carousel").slick({
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 300,
         slidesToShow: 3,
@@ -65,6 +95,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    arrows: false,
                 },
             },
             {

@@ -209,26 +209,32 @@ ul.slick-dots{
 /***** End New Game *****/
 
 /***** Start Load More Button *****/
-.loadMore button{
-    background-color: transparent;
-    color: #6c5dd3;
-    border: 1px solid #6c5dd3;
-    padding: 12px 64px;
+
+.loadMore a:hover{
+    color: #FFF;
 }
 
-.loadMore button:hover{
+.loadMore .btn{
     background-color: #6c5dd3;
-    color: #fff;
+    color: #FFF;
+    border: 1px solid #6c5dd3;
+    padding: 12px 64px;
+    filter: drop-shadow(0px 15px 8px rgba(0, 0, 0, 0.9));
+}
+
+.loadMore .btn:hover{
+    background-color: #5c4bce;
+    color: #FFF;
     border-color: #6c5dd3;
 }
 
-.loadMore button:active{
+.loadMore .btn:active{
     background-color: #6c5dd3 !important;
     color: #fff;
     border-color: #6c5dd3 !important;
 }
 
-.loadMore button:focus{
+.loadMore .btn:focus{
     background-color: #6c5dd3 !important;
     color: #fff;
     border-color: #6c5dd3 !important;
@@ -339,7 +345,7 @@ ul.slick-dots{
 }
 
 .blogContent .mostView .listNew{
-    padding: 15px 0px 0px 30px;
+    padding: 15px 0px 0px 18px;
 }
 
 .blogContent .mostView .listNew li{
@@ -519,7 +525,7 @@ ul.slick-dots{
     }
 
     .blogContent .mostView .listNew{
-        padding: 15px 15px 0px 30px;
+        padding: 15px 15px 0px 18px;
     }
     
 }

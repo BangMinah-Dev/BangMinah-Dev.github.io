@@ -23,7 +23,6 @@ a {
 
 .leftBox,
 .rightBox {
-    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
 }
@@ -67,11 +66,12 @@ a {
 
 .leftBox .item .info .text h3 {
     width: 100%;
+    font-size: 24px;
 }
 
 .leftBox .item .info .price {
     width: 30%;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-align: right;
     padding-right: 10px;
@@ -87,46 +87,117 @@ a {
 }
 
 .leftBox .total p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.payment {
+.rightBox .payment {
     border: 1px solid #6c5dd3;
-    margin-left: 100px;
+    margin-left: 70px;
     box-shadow: 8px 15px 8px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
 }
 
-.payment h3 {
+.rightBox .payment h3 {
     text-align: center;
     font-size: 20px;
     padding: 15px 0px;
 }
 
-.payment .info{
+.rightBox .payment .info{
     padding: 0px 32px;
 }
 
-.payment .group{
+.rightBox .payment .group{
     display: flex;
     flex-direction: column;
-    margin: 15px 0px;
 }
 
-.payment input{
+.rightBox .payment .group,
+.rightBox .payment .line2,
+.rightBox .payment .ckBox{
+    margin: 20px 0px;
+}
+
+.rightBox .payment .line2 .group{
+    margin: 0;
+}
+
+.rightBox .payment input{
     box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    padding: 0px 10px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
 }
 
-.payment .line2{
+.rightBox .payment input:focus{
+    border: none;
+    outline: 0;
+}
+
+.rightBox .payment [type="checkbox"]{
+    height: 12px;
+}
+
+.rightBox .payment [type="text"]::placeholder{
+    font-weight: bold;
+}
+
+.rightBox .payment .line2{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.payment .line2 .group input{
+.rightBox .payment .line2 .group input{
     width: 100%;
+}
+
+.rightBox .payment .policy{
+    text-align: justify;
+}
+
+.rightBox .payment .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0px;
+}
+
+.rightBox .payment .total p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rightBox .payment .total .btn{
+    color: #FFF;
+    background-color: #6c5dd3;
+}
+
+.rightBox .payment .total .btn:hover{
+    color: #FFF;
+    background-color: #5c4bce;
+}
+
+@media (max-width: 1199.98px){
+    .rightBox .payment {
+        border: 1px solid #6c5dd3;
+        margin-left: 30px;
+        box-shadow: 8px 15px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 991.98px){
+    .rightBox .payment {
+        border: 1px solid #6c5dd3;
+        margin-left: 0px;
+        margin-top: 30px;
+        box-shadow: 8px 15px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
 }
 
 @media (max-width: 767.98px) {

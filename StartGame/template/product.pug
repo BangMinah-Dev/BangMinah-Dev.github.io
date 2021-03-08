@@ -26,20 +26,35 @@ block content
                 i.far.fa-play-circle
                 .mfp-hide
                     iframe(width='1280' height='720' src='https://www.youtube.com/embed/1TRFPx09j_8' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
-        .container.title#title
-            .leftBox
-                h2 GENSHIN IMPACT
-                p#dev Mihoyo
-            .rightBox
-                p $ 29.99
-                a.btn Mua Ngay 
+    .container.title#title
+        #leftBox
+            h2 GENSHIN IMPACT
+            p#dev Mihoyo
+        .rightBox#rightBox
+            p $ 29.99
+            a.btn Mua Ngay 
+    //- .container-fluid.cover 
+    //-     .background 
+    //-         img(src="./img/products/Ningguang.png", alt="image")
+    //-     .video
+    //-         a.video-link(href='https://www.youtube.com/watch?v=1TRFPx09j_8')
+    //-             i.far.fa-play-circle
+    //-             .mfp-hide
+    //-                 iframe(width='1280' height='720' src='https://www.youtube.com/embed/1TRFPx09j_8' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
+    //-     .container.title#title
+    //-         .leftBox
+    //-             h2 GENSHIN IMPACT
+    //-             p#dev Mihoyo
+    //-         .rightBox#rightBox.normal
+    //-             p $ 29.99
+    //-             a.btn Mua Ngay 
     .container.carousel
         +image-item("./img/products/2020092417575257734.jpg")
         +image-item("./img/products/2020092417575221927.jpg")
         +image-item("./img/products/maxresdefault.jpg")
     
     .container.intro 
-        h2.mt-5.mb-5 Giới thiệu
+        h2(style="margin-top: 20px")#tieuDe Giới thiệu
         .content.row
             .leftContent.col-lg-8.col-md-7.col-sm-12
                 +intro("Cuộc phiêu lưu giả tưởng đậm chất sử thi",

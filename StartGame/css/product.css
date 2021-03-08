@@ -27,69 +27,78 @@ body{
     color: #FFF;
 }
 
-.cover .title{
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translate(-50%);
-    height: 150px;
-}
-
-.cover .title .leftBox{
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    color: #FFF;
-}
-
-.cover .title .leftBox p{
-    transition: font-size 0.6s ease-in-out;
-}
-
-.cover .title .leftBox p.scroll{
-    font-size: 0px;
-}
-
-
-.cover .title .rightBox{
-    position: absolute;
-    background-color: #FFF;
-    right: 0;
-    width: 400px;
-    height: 100%;
-    border-radius: 5px;
-    padding: 15px 20px;
-    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
-    transition: width .5s ease-in-out;
-}
-
-.cover .title .rightBox:hover{
-    position: absolute;
-    background-color: #FFF;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    padding: 15px 20px;
-    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
+.title{
+    position: relative;
+    top: -60px;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 15px;
 }
 
-.cover .title .rightBox p{
+.title .leftBox{
+    display: none;
+}
+
+.title #leftBox{
+    color: #FFF;
+    width: 100%;
+}
+
+.title .rightBox{
+    background-color: #FFF;
+    width: 70%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.25);
+    -webkit-transition: width 0.2s linear;
+    -moz-transition: width 0.2s linear;
+    -o-transition: width 0.2s linear;
+    -ms-transition: width 0.2s linear;
+    transition: width 0.2s linear;
+}
+
+
+
+.title .effect{
+    position: fixed;
+    background-color: #FFF;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 1120px;
+    height: 60px;
+    border-radius: 0px;
+    padding: 4px 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: width .3s linear;
+    z-index: 99;
+}
+
+.title .effect > p{
+    margin-top: 20px;
+}
+
+.title .rightBox p{
     color: #000;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.cover .title .rightBox .btn{
+.title .rightBox .btn{
     background-color: #6C5DD3;
     color: #FFF;
     width: 100%;
+    padding: 12px;
 }
 
 .carousel{
-    margin-top: 170px;
+    margin-top: 70px;
     padding: 15px;
 }
 
@@ -180,4 +189,48 @@ td{
 
 .color{
     color: #6C5DD3;
+}
+
+@media (max-width: 991.98px){
+    .carousel{
+        margin-top: 30px;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 767.98px){
+    .cover .video .fa-play-circle{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .cover .video .fa-play-circle{
+        font-size: 70px;
+    }
+
+    .title .rightBox p{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 500px){
+    .title{
+        position: relative;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0px 15px;
+    }
+
+    .title .rightBox{
+        width: 100% !important;
+    }
+
+    .title #leftBox{
+        margin: 15px 0px;
+    }
 }

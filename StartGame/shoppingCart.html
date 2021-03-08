@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./libs/slick/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/shoppingCart.css">
+    <link rel="stylesheet" href="./css/category.css">
     <title>Start Game - Giỏ hàng</title>
   </head>
   <body> 
@@ -104,12 +105,12 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container yourOrder">
       <h2>Đơn hàng của bạn</h2>
     </div>
     <div class="container"> 
       <div class="row"> 
-        <div class="leftBox col-xl-7 col-lg-8 col-md-12">
+        <div class="leftBox col-xl-7 col-lg-7 col-md-12">
           <div class="_border">
             <div class="item mb-3"> 
               <div class="image"><img src="./img/shoppingCart/e338d98a64b4a810c498bff53f4eea2f.png" alt="image"></div>
@@ -138,7 +139,7 @@
             </div>
           </div>
         </div>
-        <div class="rightBox col-xl-5 col-lg-4 col-md-12">
+        <div class="rightBox col-xl-5 col-lg-5 col-md-12">
           <div class="payment"> 
             <h3>Nhập thông tin thanh toán</h3>
             <div class="info">
@@ -181,37 +182,190 @@
                 </div>
                 <div class="text">Thẻ tín dụng / ghi nợ</div>
               </div>
-              <form action="">
+              <form action="" method="POST">
                 <div class="group">
-                  <label for="">Số thẻ</label>
-                  <input type="text">
+                  <label for="input_1">Số thẻ</label>
+                  <input id="input_1" type="text" placeholder="1234 5678 8765 4321">
                 </div>
                 <div class="line2"> 
                   <div class="group">
-                    <label for="">Số thẻ</label>
-                    <input type="text">
+                    <label for="input_2">Ngày hết hạn</label>
+                    <input id="input_2" type="text" placeholder="MM/YY">
                   </div>
                   <div class="group ml-4">
-                    <label for="">Số thẻ</label>
-                    <input type="text">
+                    <label for="input_3">CVC/ CVV</label>
+                    <input id="input_3" type="text" placeholder="123">
                   </div>
                 </div>
                 <div class="group">
-                  <label for="">Số thẻ</label>
-                  <input type="text">
+                  <label for="input_4">Tên chủ thẻ</label>
+                  <input id="input_4" type="text" placeholder="Ex. Tran Van A">
                 </div>
                 <div class="group">
-                  <label for="">Số thẻ</label>
-                  <input type="text">
+                  <label for="input_5">Địa chỉ email</label>
+                  <input id="input_5" type="text" placeholder="Ex. tranvana@email.com">
                 </div>
                 <div class="ckBox"> 
-                  <input type="checkbox" name="" id="checkbox">
-                  <label for="checkbox">Lưu cho lần thanh toán tiếp theo</label>
+                  <input id="checkBox" type="checkbox" name="">
+                  <label for="checkBox">Lưu cho lần thanh toán tiếp theo</label>
                 </div>
-                <div class="policy mb-4"> 
+                <div class="policy mb-4 mt-4"> 
                   <p>Mã thông báo thanh toán được mã hóa an toàn sẽ được tạo sau khi ngân hàng của bạn chấp thuận giao dịch mua. Chúng tôi không lưu trữ chi tiết thẻ của bạn trực tiếp trong cơ sở dữ liệu của chúng tôi</p>
                 </div>
+                <div class="total"> 
+                  <p>$ 34.98</p>
+                  <button class="btn confirm" type="button">Thanh toán đơn hàng </button>
+                </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container alsoLike mt-5"> 
+      <h2>Có thể bạn cũng thích</h2>
+      <div class="grid" id="grid" data-jplist-group="data-group-1">
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/7882.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Dead &amp; Cells</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 7.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/11685.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Boomerang FU</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 9.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12320.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Outcast In Mars</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến Thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 10.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12021.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Crystal Charsers</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến Thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 15.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12314.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Down Bermuda</div></a></h4>
+            <p class="category Action"> <a href="#">Hành Động</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 8.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12221.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">The First Friend</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến Thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 19.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12063.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Resident Evil</div></a></h4>
+            <p class="category role-playing"> <a href="#">Nhập vai</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 18.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item" data-jplist-item="data-jplist-item">
+          <div class="image"><a href="#"> <img src="./img/category/12133.jpg" alt="image"/></a></div>
+          <div class="content">
+            <h4 class="Name"><a href="#">
+                <div class="name">Anime Studio</div></a></h4>
+            <p class="category strategy"> <a href="#">Chiến thuật</a></p>
+            <p class="platform"><a href="#"> <i class="fab fa-windows"></i></a><a href="#"> <i class="fab fa-apple"></i></a>
+            </p>
+            <div class="btnBox">
+              <button class="btn price">$ 12.99</button>
+            </div>
+            <div class="discount">
+              <div class="sale">
+                <p>-10%</p>
+              </div>
             </div>
           </div>
         </div>
