@@ -53,7 +53,7 @@
                         a.dropdown-item(href='#') Chiến thuật
                         a.dropdown-item(href='#') Nhập vai
                 li.nav-item
-                    a.nav-link(href='#')
+                    a.nav-link(href='news.html')
                         | Tin tức
                 li.nav-item
                     a.nav-link(href='#')
@@ -77,11 +77,11 @@
         button.close(type='button' data-dismiss='modal' aria-label='Close')
           span(aria-hidden='true') ×
       .modal-body
-        form
+        form(action="" method="POST")
             .form-group
                 input.form-control#recipient-name(type='text' placeholder="Nhập tên game cần tìm")
             .form-group
-                label.col-form-label(for='ram') Ram
+                label.col-form-label(for='ram') Ram tối thiểu
                 select.form-control#ram(type='text')
                     option 4GB
                     option 8GB

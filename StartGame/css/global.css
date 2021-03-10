@@ -321,6 +321,10 @@ nav .searchMobile button:focus{
 /***** Responsive *****/
 
 @media (max-width: 991.98px){
+    nav .dropdown-menu{
+        border: 1px solid #6c5dd3;
+    }
+    
     nav .searchDesktop{
         display: none;
     }

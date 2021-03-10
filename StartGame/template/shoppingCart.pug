@@ -5,7 +5,6 @@ block title
 
 block css
     link(rel="stylesheet", href="./css/shoppingCart.css")
-    //- link(rel="stylesheet", href="./libs/jplist/jplist.styles.css")
     link(rel="stylesheet", href="./css/category.css")
 
 
@@ -115,7 +114,7 @@ block content
                             .total 
                                 p $ 34.98
                                 button.btn.confirm(type="button") Thanh toán đơn hàng 
-    .container.alsoLike.mt-5 
+    .container.alsoLike 
         h2 Có thể bạn cũng thích
         .grid#grid(data-jplist-group='data-group-1')
             +item("Action", "Hành Động", href, "./img/category/7882.jpg", alt, "Dead & Cells", "7.99", "10", "fab fa-windows", "fab fa-apple")
@@ -128,4 +127,5 @@ block content
             +item("strategy", "Chiến thuật", href, "./img/category/12133.jpg", alt, "Anime Studio", "12.99", "10", "fab fa-windows", "fab fa-apple")        
 
 block script
-    script(src="./js/shoppingCart.js") 
+    script(src="./js/shoppingCart.js")
+
