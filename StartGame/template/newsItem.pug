@@ -1,7 +1,7 @@
 extends template-part/layout.pug
 
 block title
-    title Start Game - Tin tức
+    title(class="tinTuc") Start Game - Tin tức
 
 block css
     link(rel="stylesheet", href="./css/newsItem.css")
@@ -10,11 +10,15 @@ block content
     .container.text.mt-5
         h2 Genshin Impact: Người chơi nên chọn những nhân vật nào cho đội hình?
         p.mt-3.mb-3 Genshin Impact đang trở nên rất hot với hệ thống nhân vật đa dạng của mình, tuy vậy người chơi sẽ có nhiều sự khó khăn trong lúc lựa chọn đội hình phù hợp.
-    .container.mt-5.image 
+        p.mt-3
+            i.mr-3.fab.fas.fa-share
+            i.mr-3.fab.fa-facebook-f
+            i.fab.fa-twitter
+    .container.mt-4.image 
         img(src="./img/products/genshin_13_4K.jpg", alt="image")
         .text-center.mt-1 Hệ thống nhân vật của game khá đa dạng
     .container.text.mt-4
-        p.mt-3.mb-3 Với 23 nhân vật khác nhau chưa được mở khóa không bao gồm nhân vật chính, Genshin Impact đang khiến cho những người chơi mới sự tò mò trong việc lựa chọn ra đội hình ưng ý cho cuộc hành trình của mình.
+        p.mt-3.mb-3 Với 25 nhân vật khác nhau chưa được mở khóa không bao gồm nhân vật chính, Genshin Impact đang khiến cho những người chơi mới sự tò mò trong việc lựa chọn ra đội hình ưng ý cho cuộc hành trình của mình.
         p.mt-3.mb-3 Mỗi nhân vật trong game Genshin Impact đều có vai trò, hệ khác nhau, vì thế để chọn ra một đội hình phù hợp, người chơi cần phải có một sự tham khảo nhất định.
         p.mt-3.mb-3 Những nhân vật trong Genshin Impact chủ yếu được chia thành 3 vai trò chính: DPS (sát thương chủ lực), Support (hỗ trợ sát thương, gây hiệu ứng) và healer (hồi phục, buff).
         p.mt-3.mb-3 Ngoài ra, mỗi nhân vật còn có một hệ nguyên tố khác nhau như Phong, Hỏa, Lôi, Thủy, Băng… Vì vậy người chơi cần chọn ra một đội hình có thể dung hòa được 2 yếu tố trên.

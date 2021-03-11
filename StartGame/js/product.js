@@ -37,7 +37,7 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 5000,
         responsive: [
@@ -46,7 +46,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    arrows: false,
                 },
             },
             {
@@ -54,7 +53,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    arrows: false
                 },
             },
             {
@@ -62,7 +60,6 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: false
                 },
             },
         ],

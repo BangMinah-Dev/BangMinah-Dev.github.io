@@ -70,7 +70,6 @@ body{
     padding: 4px 15px;
     display: flex;
     justify-content: space-between;
-    transition: width .3s linear;
     z-index: 99;
 }
 

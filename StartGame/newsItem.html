@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./libs/slick/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/newsItem.css">
-    <title>Start Game - Tin tức</title>
+    <title class="tinTuc">Start Game - Tin tức</title>
   </head>
   <body> 
     <div class="container-fluid sticky-top">
@@ -44,12 +44,12 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="index.html">Trang chủ </a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thể loại <i class="fas fa-caret-down"></i></a>
+            <li class="nav-item" id="trangChu"><a class="nav-link" href="index.html">Trang chủ </a></li>
+            <li class="nav-item dropdown" id="theLoai"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thể loại <i class="fas fa-caret-down"></i></a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="category.html">Tất cả</a><a class="dropdown-item" href="#">Hành động</a><a class="dropdown-item" href="#">Chiến thuật</a><a class="dropdown-item" href="#">Nhập vai</a></div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Tin tức</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Hướng dẫn</a></li>
+            <li class="nav-item" id="tinTuc"><a class="nav-link" href="news.html">Tin tức</a></li>
+            <li class="nav-item" id="huongDan"><a class="nav-link" href="#">Hướng dẫn</a></li>
             <li class="nav-item function d-flex"><a class="nav-link searchDesktop" href="#">
                 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal"> <i class="fas fa-search"></i></button></a><a class="nav-link cart" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i>
                 <div class="noti"><span>10</span></div></a><a class="nav-link" href="#"><i class="fas fa-user"></i></a></li>
@@ -107,12 +107,13 @@
     <div class="container text mt-5">
       <h2>Genshin Impact: Người chơi nên chọn những nhân vật nào cho đội hình?</h2>
       <p class="mt-3 mb-3">Genshin Impact đang trở nên rất hot với hệ thống nhân vật đa dạng của mình, tuy vậy người chơi sẽ có nhiều sự khó khăn trong lúc lựa chọn đội hình phù hợp.</p>
+      <p class="mt-3"><i class="mr-3 fab fas fa-share"></i><i class="mr-3 fab fa-facebook-f"></i><i class="fab fa-twitter"></i></p>
     </div>
-    <div class="container mt-5 image"> <img src="./img/products/genshin_13_4K.jpg" alt="image">
+    <div class="container mt-4 image"> <img src="./img/products/genshin_13_4K.jpg" alt="image">
       <div class="text-center mt-1">Hệ thống nhân vật của game khá đa dạng</div>
     </div>
     <div class="container text mt-4">
-      <p class="mt-3 mb-3">Với 23 nhân vật khác nhau chưa được mở khóa không bao gồm nhân vật chính, Genshin Impact đang khiến cho những người chơi mới sự tò mò trong việc lựa chọn ra đội hình ưng ý cho cuộc hành trình của mình.</p>
+      <p class="mt-3 mb-3">Với 25 nhân vật khác nhau chưa được mở khóa không bao gồm nhân vật chính, Genshin Impact đang khiến cho những người chơi mới sự tò mò trong việc lựa chọn ra đội hình ưng ý cho cuộc hành trình của mình.</p>
       <p class="mt-3 mb-3">Mỗi nhân vật trong game Genshin Impact đều có vai trò, hệ khác nhau, vì thế để chọn ra một đội hình phù hợp, người chơi cần phải có một sự tham khảo nhất định.</p>
       <p class="mt-3 mb-3">Những nhân vật trong Genshin Impact chủ yếu được chia thành 3 vai trò chính: DPS (sát thương chủ lực), Support (hỗ trợ sát thương, gây hiệu ứng) và healer (hồi phục, buff).</p>
       <p class="mt-3 mb-3">Ngoài ra, mỗi nhân vật còn có một hệ nguyên tố khác nhau như Phong, Hỏa, Lôi, Thủy, Băng… Vì vậy người chơi cần chọn ra một đội hình có thể dung hòa được 2 yếu tố trên.</p>
@@ -170,5 +171,6 @@
     <script src="./libs/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./libs/slick/slick/jquery-migrate-1.2.1.min.js"> </script>
     <script src="./libs/slick/slick/slick.min.js"></script>
+    <script src="./js/global.js"></script>
   </body>
 </html>

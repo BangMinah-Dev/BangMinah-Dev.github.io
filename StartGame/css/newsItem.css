@@ -3,7 +3,7 @@ body{
 }
 
 .text{
-    padding: 0 12rem;
+    padding: 0 14rem;
 }
 
 img{
@@ -14,9 +14,16 @@ img{
     font-style: italic;
 }
 
+.fab:hover{
+    color: #6c5dd3;
+}
+
 @media (max-width: 991.98px){
     .text{
         padding: 0 7rem;
+    }
+    .image{
+        padding: 0px 15px;
     }
 }
 
