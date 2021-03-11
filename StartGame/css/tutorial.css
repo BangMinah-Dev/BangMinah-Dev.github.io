@@ -1,0 +1,54 @@
+body{
+    color: #FFF;
+}
+
+h2{
+    text-align: center;
+    color: #6c5dd3;
+}
+
+.text{
+    padding: 0 10rem;
+    text-align: justify;
+}
+
+table{
+    width: 100%;
+}
+
+table,tr,th,td{
+    border: 1px solid #FFF;;
+}
+
+th{
+    text-align: center;
+}
+
+th,td{
+    padding: 15px;
+}
+
+p{
+    text-align: justify;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 991.98px){
+    .text{
+        padding: 0 7rem;
+    }
+    .image{
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .text{
+        padding: 0 1rem;
+    }
+}

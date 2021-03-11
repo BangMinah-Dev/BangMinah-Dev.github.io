@@ -1,0 +1,65 @@
+extends template-part/layout.pug
+
+block title
+    title(class="huongDan") Start Game - Những vấn đề thường gặp khi tải và chơi game
+
+block css
+    link(rel="stylesheet", href="./css/tutorial.css")
+    
+block content
+    .container.mt-5
+        h2 Những vấn đề thường gặp khi tải và chơi game
+        p.text.mt-4 Hầu hết các game đều có thông tin cấu hình tối thiểu của game. Nếu bạn không biết đọc các thuật ngữ, thông số máy tính thì có thể cảm thấy bối rối. Đừng lo, sau khi đọc bảng giải thích các thông số dưới đây, bạn sẽ thấy việc kiểm tra xem cấu hình máy có đủ đáp ứng yêu cầu của một game nào đó không khá là đơn giản. 
+        p.text.mt-2 Cấu hình yêu cầu của một game sẽ có các thành phần sau đây (hoặc có thể ít hơn):
+        .title.mt-4 Bảng giải thích các thuật ngữ và thông số cấu hình máy tính
+        table.mt-3
+            tr 
+                th Thuật ngữ
+                th Giải thích
+                th Ví dụ
+            tr 
+                td OS / <br> Hệ điều hành
+                td 
+                    p - Viết tắt của Operating System, có nghĩa là hệ điều hành. Thứ tự các bản Windows từ thấp đến cao là:
+                    p.mt-2 - Windows 98 - 2000 - XP - Vista - 7 - 8 - 10
+                    p.mt-2 - Các phiên bản từ Windows XP còn có thêm các bản Service Pack (SP), là các bản vá (sửa lỗi, nâng cấp) cho các bản chính. Vd: Windows Vista SP2 là hệ điều hành Windows Vista, sử dụng bản vá 2.
+                    p.mt-2 - Khi 1 game yêu cầu 1 OS bản thấp (chẳng hạn như Windows XP), thì có thể các bản OS cao hơn (như Vista hoặc 7) vẫn có thể chơi được. Đó là do ở thời điểm game ra đời thì chưa có các bản Windows mới này, nên nhà sản xuất không thể liệt kê các bản Windows mới vào cấu hình yêu cầu của game.
+                    p.mt-2 - Nếu phần này có ghi 64bit / x64 thì có nghĩa game yêu cầu Windows bản 64bit. Các bản Windows (Vista, 7, 8, 10...) đều có phiên bản 32bit và 64bit. Nếu máy bạn cài Windows bản 64bit thì không phải nghĩ về yêu cầu này (máy bạn sẽ chơi được cả các game 32bit lẫn 64bit). Nhưng nếu máy bạn cài Windows bản 32bit, thì bạn sẽ không chơi được những game dành cho 64bit, hoặc những game yêu cầu từ 4GB RAM trở lên. Tốt nhất bạn nên cài lại 1 bản Windows 64bit để chơi được mọi game (mà cấu hình cho phép).
+                td Windows XP (SP3), Windows 7
+            tr 
+                td Processor / CPU (Chip)
+                td 
+                    p.mt-2 - Còn gọi là CPU, là bộ vi xử lý (hay chip máy tính), được đo bằng thông số Ghz (càng cao càng mạnh) và số nhân (lõi). 
+                    p.mt-2 - Các game mạnh nhất hiện giờ cũng chỉ yêu cầu CPU tối đa là 2 nhân (dual core)
+                td 
+                    p.mt-2 - Intel CoreTM2 Duo 2.4 Ghz or better, AMD AthlonTM X2 2.8 Ghz or better
+                    p.mt-2 - Giải thích: Nếu máy bạn dùng bộ xử lý Intel thì yêu cầu bộ xử lý 2 lõi, tốc độ 2.4 Ghz hoặc cao hơn; còn nếu dùng bộ xử lý AMD thì yêu cầu bộ xử lý 2 lõi (X2) tốc độ 2.8 Ghz hoặc cao hơn 
+            tr 
+                td Memory (Ram)
+                td 
+                    p.mt-2 Còn gọi là RAM, là bộ nhớ tạm thời của máy tính, được đo bằng thông số MB hoặc GB 
+                    p.mt-2 (1 GB = 1024 MB)
+                td 4GB RAM
+            tr  
+                td Hard Drive <br> / Ổ Cứng
+                td 
+                    p.mt-2 - Còn gọi là Hard Disk Space / HDD, là ổ cứng máy tính, được đo bằng thông số GB hoặc MB (1 GB = 1024 MB), chỉ dung lượng ổ cứng yêu cầu. 
+                    p.mt-2 - Nghĩa là ổ cứng của bạn phải còn trống đủ dung lượng đó để có thể cài game.
+                td 
+                    p.mt-2 - 7 GB HD space
+                    p.mt-2 - Giải thích: ổ cứng của bạn phải còn trống từ 7 GB trở lên 
+            tr 
+                td Graphics / Card đồ họa
+                td 
+                    p.mt-2 - Còn gọi là VGA / Video Card, là card đồ họa. Đây là thiết bị phần cứng xử lý hình ảnh trên máy tính. Hầu hết các loại card đồ họa hiện nay sử dụng chip hiệu NVidia GeForce hoặc ATI Radeon. Và cấu hình yêu cầu của 1 game sẽ cho biết tên của card đồ họa tối thiểu cần phải có để chạy game đó.
+                    p.mt-2 - Nếu phần này không được nêu trong cấu hình yêu cầu thì rất có thể card nào cũng có thể chạy được game đó
+                td 
+                    p.mt-2 - NVidia GeForce 8600 GT / ATI Radeon HD X1800 or better
+                    p.mt-2 - Giải thích: game yêu cầu card NVidia GeForce 8600 GT trở lên hoặc card ATI Radeon HD X1800 trở lên. 
+            tr 
+                td DirectX
+                td - Là chương trình phần mềm hỗ trợ xử lý đồ họa, được cài trên máy tính bạn.
+                td 
+                    p.mt-2 9.0c or greater
+                    p.mt-2 Giải thích: game yêu cầu máy bạn cài DirectX bản 9.0c hoặc cao hơn 
+block script

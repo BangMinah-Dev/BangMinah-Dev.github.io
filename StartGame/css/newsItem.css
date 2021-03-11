@@ -4,6 +4,7 @@ body{
 
 .text{
     padding: 0 14rem;
+    text-align: justify;
 }
 
 img{
