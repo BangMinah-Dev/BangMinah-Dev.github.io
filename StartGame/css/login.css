@@ -126,6 +126,24 @@ button{
     .container{
         padding: 0px 15px;
     }
+
+    .logo {
+        width: 60px;
+    }
+    
+    .top p{
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    button{
+        font-size: 20px !important;
+    }
 }
 
 @media (max-width: 474.98px){
