@@ -24,7 +24,7 @@ a{
     transition: all 0.25s ease-in-out;
 }
 
-.text{
+.texts{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -35,7 +35,7 @@ a{
     background-color: rgba(0, 0, 0, 0.15); 
 }
 
-.text p{
+.texts p{
     text-shadow: 2px 2px #000;
     color: #FFF;
     font-size: 24px;
@@ -53,7 +53,7 @@ a{
     align-content: space-between;
 }
 
-.rightContent .text p{
+.rightContent .texts p{
     font-size: 18px;
 }
 
@@ -65,7 +65,7 @@ a{
     height: 200px;
 }
 
-.older .newItem .text p{
+.older .newItem .texts p{
     font-size: 16px;
 }
 
@@ -82,7 +82,7 @@ a{
         margin-bottom: 25px;
     }
 
-    .text{
+    .texts{
         display: none;
     }
 
@@ -101,14 +101,25 @@ a{
         margin-bottom: 25px
     }
     
-    .rightContent{
+    .older{
         display: block;
-        flex-direction: column;
-        justify-content: space-between;
+        margin-top: -15px !important;
     }
 
     .content_2,
     .content_3{
         margin: 15px 0px;
+    }
+
+    .blog,
+    .mostView{
+        padding: 0;
+    }
+}
+
+@media (max-width: 767.98px){
+    .blog,
+    .mostView{
+        padding: 0px !important;
     }
 }

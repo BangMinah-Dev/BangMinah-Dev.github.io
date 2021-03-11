@@ -29,19 +29,21 @@ mixin poster(src, name, price, des, alt="image", ...platforms)
                     button.btn Đăng ký
 
 //- Product item
-mixin product(src, alt="product image")
-    .product
-        img(src=src, alt=alt)
+mixin product(href="product.html", src, alt="product image")
+    a(href= href) 
+        .product
+            img(src=src, alt=alt)
 
 
 //- New
 mixin blogBox(src, alt="blog image", h4, p)
-    .box 
-        .image 
-            img(src=src, alt=alt)
-        .text 
-            h4=h4
-            p=p
+    a(href="newsItem.html") 
+        .box 
+            .image 
+                img(src=src, alt=alt)
+            .text 
+                h4=h4
+                p=p
 
 
 
@@ -54,7 +56,7 @@ block css
 block content
     .container-fluid.cover
         +slide('./img/cover/Cover.jpg', "./img/cover/Genshin.png", "product.html", text, "./img/cover/mihoyo.png")
-        +slide('./img/cover/cyberpunk2077characterart.jpg', "./img/cover/cyberLogo.png", href, text, "./img/cover/cyber.png")
+        +slide('./img/cover/cyberpunk2077characterart.jpg', "./img/cover/cyberLogo.png", "product.html", text, "./img/cover/cyber.png")
 
     .container 
         .comingSoon
@@ -106,18 +108,18 @@ block content
             .new 
                 h2 Game Mới Đăng
             .container.newGame
-                +product("./img/newgame/11731.jpg")
-                +product("./img/newgame/11593.jpg")
-                +product("./img/newgame/12230.jpg")
-                +product("./img/newgame/11685.jpg")
-                +product("./img/newgame/11842.jpg")
-                +product("./img/newgame/12133.jpg")
-                +product("./img/newgame/12188.jpg")
-                +product("./img/newgame/12328.jpg")
-                +product("./img/newgame/12163.jpg")
-                +product("./img/newgame/11494.jpg")
-                +product("./img/newgame/7882.jpg")
-                +product("./img/newgame/11659.jpg")
+                +product(href,"./img/newgame/11731.jpg")
+                +product(href,"./img/newgame/11593.jpg")
+                +product(href,"./img/newgame/12230.jpg")
+                +product(href,"./img/newgame/11685.jpg")
+                +product(href,"./img/newgame/11842.jpg")
+                +product(href,"./img/newgame/12133.jpg")
+                +product(href,"./img/newgame/12188.jpg")
+                +product(href,"./img/newgame/12328.jpg")
+                +product(href,"./img/newgame/12163.jpg")
+                +product(href,"./img/newgame/11494.jpg")
+                +product(href,"./img/newgame/7882.jpg")
+                +product(href,"./img/newgame/11659.jpg")
             .container.loadMore.d-flex.justify-content-center.mt-5.mb-5
                 a.btn(href="category.html") Xem thêm
         .container
@@ -146,25 +148,26 @@ block content
                             )         
                 .mostView
                     h2 Xem nhiều
-                    .box
-                        .image
-                            img(src="./img/blogs/gta-v-big_1477133865.jpg", alt="")
-                        .text 
-                            h4 GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử
+                    a(href="newsItem.html") 
+                        .box
+                            .image
+                                img(src="./img/blogs/gta-v-big_1477133865.jpg", alt="")
+                            .text 
+                                h4 GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử
                     .listNew 
                         ul 
                             li
-                                a(href="") GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử 
+                                a(href="newsItem.html") GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử 
                             li
-                                a(href="") Bỏ 10 năm xây cả thế giới Chúa Nhẫn trong Minecraft đẹp mê hồn
+                                a(href="newsItem.html") Bỏ 10 năm xây cả thế giới Chúa Nhẫn trong Minecraft đẹp mê hồn
                             li
-                                a(href="") Game thủ Liên Minh: Tốc Chiến đầu tiên của Việt Nam đạt Thách Đấu mùa 1
+                                a(href="newsItem.html") Game thủ Liên Minh: Tốc Chiến đầu tiên của Việt Nam đạt Thách Đấu mùa 1
                             li
-                                a(href="") Top 3 trang bị mạnh và dễ sử dụng nhất tại Đấu Trường Chân Lý bản 11.2
+                                a(href="newsItem.html") Top 3 trang bị mạnh và dễ sử dụng nhất tại Đấu Trường Chân Lý bản 11.2
                             li
-                                a(href="") OMEN 15 Ryzen 4800H- Laptop "ngon, bổ, rẻ" cho fan đội đỏ
+                                a(href="newsItem.html") OMEN 15 Ryzen 4800H- Laptop "ngon, bổ, rẻ" cho fan đội đỏ
             .container.loadMore.d-flex.justify-content-center.mt-5.mb-5
-                a.btn(href="category.html") Xem thêm
+                a.btn(href="news.html") Xem thêm
                     
 block script 
     script(src="./js/index.js") 

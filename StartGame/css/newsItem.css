@@ -1,0 +1,27 @@
+body{
+    color: #FFF;
+}
+
+.text{
+    padding: 0 12rem;
+}
+
+img{
+    width: 100%;
+}
+
+.text-center{
+    font-style: italic;
+}
+
+@media (max-width: 991.98px){
+    .text{
+        padding: 0 7rem;
+    }
+}
+
+@media (max-width: 767.98px){
+    .text{
+        padding: 0 1rem;
+    }
+}

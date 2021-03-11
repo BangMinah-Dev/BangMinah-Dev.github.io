@@ -1,10 +1,30 @@
 extends template-part/layout.pug
 
+mixin newItem(href="#", src, alt="image", text)
+    .newItem
+        a(href= href)
+            .image  
+                img(src= src, alt= alt)
+            .texts 
+                p= text
+            .textMobile 
+                p= text
+
+mixin blogBox(src, alt="blog image", h4, p)
+    a(href="newsItem.html") 
+        .box 
+            .image 
+                img(src=src, alt=alt)
+            .text 
+                h4=h4
+                p=p
+
 block title
     title Start Game - Tin tức
 
 block css
     link(rel="stylesheet", href="./css/news.css")
+    link(rel="stylesheet", href="./css/index.css")
 
 block content
     .container.title
@@ -12,67 +32,61 @@ block content
     .container.news
         .content.row 
             .leftContent.col-xl-8.col-lg-8
-                .newItem
-                    a(href="")
-                        .image  
-                            img(src="./img/news/2021216163539.png", alt="")
-                        .text 
-                            p Genshin Impact: Người chơi nên chọn những nhân vật nào cho đội hình?
-                        .textMobile 
-                            p Genshin Impact: Người chơi nên chọn những nhân vật nào cho đội hình?
+                +newItem("newsItem.html", "./img/news/2021216163539.png", alt, "Genshin Impact: Người chơi nên chọn những nhân vật nào cho đội hình?")
             .rightContent.col-xl-4.col-lg-4
-                .newItem
-                    a(href="")
-                        .image  
-                            img(src="./img/news/photo-1-1615308404333647913392.jpg", alt="")
-                        .text 
-                            p Cấu hình game Hoa, game Việt đang gây sốt trên Steam ?
-                        .textMobile 
-                            p Cấu hình game Hoa, game Việt đang gây sốt trên Steam ?
-                .newItem
-                    a(href="")
-                        .image   
-                            img(src="./img/news/lmtcc.jpg", alt="")
-                        .text 
-                            p Liên Minh Tốc Chiến mở rộng khu vực phát hành
-                        .textMobile 
-                            p Liên Minh Tốc Chiến mở rộng khu vực phát hành
+                +newItem("newsItem.html", "./img/news/photo-1-1615308404333647913392.jpg", alt, "Cấu hình game Hoa, game Việt đang gây sốt trên Steam ?")
+                +newItem("newsItem.html", "./img/news/lmtcc.jpg", alt, "Liên Minh Tốc Chiến mở rộng khu vực phát hành")
         .content.older.mt-4.row 
             .content_1.col-xl-3.col-lg-3
-                .newItem
-                    a(href="")
-                        .image  
-                            img(src="./img/news/Game4V-Tales-of-Arise-5-555x360.jpg", alt="")
-                        .text 
-                            p Doom Eternal bị rò rỉ nhiều hình ảnh, achiviement mới
-                        .textMobile 
-                            p Doom Eternal bị rò rỉ nhiều hình ảnh, achiviement mới 
+                +newItem("newsItem.html", "./img/news/Game4V-Tales-of-Arise-5-555x360.jpg", alt, "Doom Eternal bị rò rỉ nhiều hình ảnh, achiviement mới")
             .content_2.col-xl-3.col-lg-3
-                .newItem
-                    a(href="")
-                        .image   
-                            img(src="./img/news/game4v-Mushoku-Tensei-tap-9-6-555x360.jpg", alt="")
-                        .text 
-                            p Mushoku Tensei 9: Hành trình trở về nhà
-                        .textMobile 
-                            p Mushoku Tensei 9: Hành trình trở về nhà 
+                +newItem("newsItem.html", "./img/news/game4v-Mushoku-Tensei-tap-9-6-555x360.jpg", alt, "Mushoku Tensei 9: Hành trình trở về nhà")
             .content_3.col-xl-3.col-lg-3
-                .newItem
-                        a(href="")
-                            .image   
-                                img(src="./img/news/Game4V-Monster-Hunter-Stories-2-5-555x360.jpg", alt="")
-                            .text 
-                                p Monster Hunter Stories 2 chính thực được công bố
-                            .textMobile 
-                                p Monster Hunter Stories 2 chính thực được công bố  
+                +newItem("newsItem.html", "./img/news/Game4V-Monster-Hunter-Stories-2-5-555x360.jpg", alt, "Monster Hunter Stories 2 chính thực được công bố")
             .content_4.col-xl-3.col-lg-3   
-                .newItem
-                    a(href="")
-                        .image   
-                            img(src="./img/news/Game4V-Game-doc-quyen-Sony-len-PC-3-555x360.png", alt="")
-                        .text 
-                            p Tựa game 'khủng' độc quyền của Sony sẽ chính thức lên PC
-                        .textMobile 
-                            p Tựa game 'khủng' độc quyền của Sony sẽ chính thức lên PC 
-    
+                +newItem("newsItem.html", "./img/news/Game4V-Game-doc-quyen-Sony-len-PC-3-555x360.png", alt, "Tựa game 'khủng' độc quyền của Sony sẽ chính thức lên PC")
+        .container.mt-4
+            .blogContent 
+                .blog 
+                    +blogBox("./img/blogs/2021012017225667708.jpg", 
+                             alt = alt, 
+                             'Sự kiện "Kho Báu Mất Dấu": Tìm kho báu để đổi lấy đạo cụ "Tiên Linh Nhỏ Bé"!', 
+                             'Đến Cổng Đá, nhận bản đồ kho báu và đạo cụ "Tiên Linh Tầm Bảo" từ Ulman. Nhà Lữ Hành có thể xem khu vực kho báu, thu thập "Tiền Xu" để đổi thưởng.'
+                            )
+                    +blogBox("./img/blogs/2021010818065420420.png", 
+                             alt = alt, 
+                             'Giới thiệu nhân vật trong Genshin Impact [Ganyu: Cảnh Xuân Trong Mộng]', 
+                             'Mùi hương cam thảo, vị ngọt nhành hoa, khung cảnh gió tuyết, Lưu Ly thoang thoảng.Mọi thứ như trong giấc mơ của thiếu nữ mang dòng máu Kỳ Lân.'
+                            )
+                    +blogBox("./img/blogs/2021010610420732472.png", 
+                             alt = alt, 
+                             'Sự kiện "Kho Báu Mất Dấu": Tìm kho báu để đổi lấy đạo cụ "Tiên Linh Nhỏ Bé"!', 
+                             'Đến Cổng Đá, nhận bản đồ kho báu và đạo cụ "Tiên Linh Tầm Bảo" từ Ulman. Nhà Lữ Hành có thể xem khu vực kho báu, thu thập "Tiền Xu" để đổi thưởng.'
+                            )
+                    +blogBox("./img/blogs/lego1.png", 
+                             alt = alt, 
+                             '150 triệu mảnh ghép và 3 năm làm việc miệt mài, đây là bộ Lego lớn nhất trong lịch sử', 
+                             'Từ 150 triệu mảnh ghép bé nhỏ, qua bàn tay của những nhà thiết kế, chúng ta đã được một tác phẩm Lego để đời.'
+                            )         
+                .mostView
+                    a(href="newsItem.html") 
+                        .box
+                            .image
+                                img(src="./img/blogs/gta-v-big_1477133865.jpg", alt="")
+                            .text 
+                                h4 GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử
+                    .listNew 
+                        ul 
+                            li
+                                a(href="newsItem.html") GTA 5 và những tựa game sở hữu cốt truyện hay nhất trong lịch sử 
+                            li
+                                a(href="newsItem.html") Bỏ 10 năm xây cả thế giới Chúa Nhẫn trong Minecraft đẹp mê hồn
+                            li
+                                a(href="newsItem.html") Game thủ Liên Minh: Tốc Chiến đầu tiên của Việt Nam đạt Thách Đấu mùa 1
+                            li
+                                a(href="newsItem.html") Top 3 trang bị mạnh và dễ sử dụng nhất tại Đấu Trường Chân Lý bản 11.2
+                            li
+                                a(href="newsItem.html") OMEN 15 Ryzen 4800H- Laptop "ngon, bổ, rẻ" cho fan đội đỏ
+            .container.loadMore.d-flex.justify-content-center.mt-5.mb-5
+                a.btn(href="news.html") Xem thêm
 block script
