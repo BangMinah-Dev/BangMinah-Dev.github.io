@@ -5,3 +5,6 @@ function redirect() {
   return redirect;
 }
 redirect()
+
+const redirect2 = () => window.location.href("https://story-bangminah-dev.vercel.app/")
+redirect2()
