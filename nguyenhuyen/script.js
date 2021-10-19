@@ -1,10 +1,10 @@
 function redirect() {
   const redirect = window.location.replace(
-    "https://story-bangminah-dev.vercel.app/"
+    "https://minahstory.vercel.app/"
   );
   return redirect;
 }
 redirect()
 
-const redirect2 = () => window.location.href("https://story-bangminah-dev.vercel.app/")
+const redirect2 = () => window.location.href("https://minahstory.vercel.app/")
 redirect2()
